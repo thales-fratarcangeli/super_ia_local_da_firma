@@ -1,0 +1,4 @@
+ciclo,rotulo,suite,pct,tipo
+0,Aluno cru (qwen3:8b),dev,43,aluno
+1,+ RAG v1,dev,59,aluno
+teto,Professor 32B,dev,79,teto

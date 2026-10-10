@@ -1,0 +1,15 @@
+# gerado / pesado / local
+runs/*
+!runs/pod/
+workspace/
+data/
+rag/index.json
+__pycache__/
+*.pyc
+*.db
+*.log
+junit.xml
+.pytest_cache/
+# configuração local da ferramenta e arquivos soltos
+.claude/
+aq
