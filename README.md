@@ -95,3 +95,6 @@ Em vez de imitar o professor, o `qwen3:8b` gerou 8 soluções para cada uma das 
 ## 11. Avisos
 - Credenciais (VPS, pod, chaves SSH) nunca entram no repositório.
 - O pod RunPod cobra por hora enquanto ligado; desligar (Stop) apaga o disco dele, então copie os artefatos antes.
+- **O que está no GitHub:** código, documentação, resultados e respostas de todas as medições feitas no PC (`runs/`), resumos das medições da GPU (`runs/pod/`), a Release **v4** (modelo `elias-v4` em 3 partes, adaptador, dataset de 156 exemplos) e a Release **experimentos-v3** (adaptador do v3, não recomendado).
+- **O que NÃO está (e por quê):** o modelo completo do v3 e o adaptador do v2 não foram guardados (só existiam no pod e foram descartados para liberar disco). O dataset de 281 exemplos gerados pelo professor 32B (ciclos 2 e 3) e as respostas completas de cada amostra medida na GPU existiam só no disco do pod; se o pod foi parado, foram perdidos. Os datasets podem ser regenerados com `harness/gen_dataset.py` e `harness/gen_poly_dataset.py` (precisam de um modelo professor rodando no Ollama). Os arquivos de modelo não cabem no repositório (limite de 100 MB por arquivo, 2 GB por anexo de Release), por isso o modelo de 5 GB está dividido em 3 partes.
+
