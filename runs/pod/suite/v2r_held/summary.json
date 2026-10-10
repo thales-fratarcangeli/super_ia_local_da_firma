@@ -1,0 +1,409 @@
+{
+  "name": "v2r_held",
+  "model": "elias-v2",
+  "tasks_ok": 11,
+  "total": 40,
+  "pass_rate": 0.275,
+  "results": [
+    {
+      "task": "h01_roman",
+      "sample": 0,
+      "ok": false,
+      "passed": 8,
+      "failed": 3,
+      "gen_seconds": 9.4,
+      "rag_chars": 895,
+      "tail": "/root/lab/runs/suite/v2r_held/tests/test_h01_roman.py:19: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\n3 failed, 8 passed in 0.11s\n"
+    },
+    {
+      "task": "h01_roman",
+      "sample": 1,
+      "ok": false,
+      "passed": 8,
+      "failed": 3,
+      "gen_seconds": 9.5,
+      "rag_chars": 895,
+      "tail": "/root/lab/runs/suite/v2r_held/tests/test_h01_roman.py:19: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\n3 failed, 8 passed in 0.02s\n"
+    },
+    {
+      "task": "h01_roman",
+      "sample": 2,
+      "ok": false,
+      "passed": 8,
+      "failed": 3,
+      "gen_seconds": 11.7,
+      "rag_chars": 895,
+      "tail": "/root/lab/runs/suite/v2r_held/tests/test_h01_roman.py:19: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\n3 failed, 8 passed in 0.03s\n"
+    },
+    {
+      "task": "h01_roman",
+      "sample": 3,
+      "ok": false,
+      "passed": 6,
+      "failed": 5,
+      "gen_seconds": 9.8,
+      "rag_chars": 895,
+      "tail": "====================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[abc] - KeyError: 'a'\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[mcm] - KeyError: 'm'\n5 failed, 6 passed in 0.02s\n"
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 0,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 3.7,
+      "rag_chars": 837,
+      "tail": "AILURES ===================================\nE   AssertionError: assert '(' == 0\n     +  where '(' = check_brackets('((')\n/root/lab/runs/suite/v2r_held/tests/test_h02_brackets.py:13: AssertionError: assert '(' == 0\n=========================== short test summary info ============================\nFAILED ::test_unclosed_reports_oldest_open - AssertionError: assert '(' == 0\n1 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 3.7,
+      "rag_chars": 837,
+      "tail": ""
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 3.4,
+      "rag_chars": 837,
+      "tail": "====== FAILURES ===================================\nE   AssertionError: assert 1 == 0\n     +  where 1 = check_brackets('((')\n/root/lab/runs/suite/v2r_held/tests/test_h02_brackets.py:13: AssertionError: assert 1 == 0\n=========================== short test summary info ============================\nFAILED ::test_unclosed_reports_oldest_open - AssertionError: assert 1 == 0\n1 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 3.3,
+      "rag_chars": 837,
+      "tail": "====== FAILURES ===================================\nE   AssertionError: assert 1 == 0\n     +  where 1 = check_brackets('((')\n/root/lab/runs/suite/v2r_held/tests/test_h02_brackets.py:13: AssertionError: assert 1 == 0\n=========================== short test summary info ============================\nFAILED ::test_unclosed_reports_oldest_open - AssertionError: assert 1 == 0\n1 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 4.8,
+      "rag_chars": 1095,
+      "tail": "e/v2r_held/tests/test_h03_csv_line.py:15: AssertionError: assert [' a ', ' b '] == [' a ', ' b ', '']\n=========================== short test summary info ============================\nFAILED ::test_simple - ValueError: Aspas não fechadas\nFAILED ::test_quotes - ValueError: Aspas não fechadas\nFAILED ::test_spaces_and_trailing - AssertionError: assert [' a ', ' b '] == ...\n3 failed, 1 passed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 5.3,
+      "rag_chars": 1095,
+      "tail": "===========\nE   assert ['\"a,b\"', 'c'] == ['a,b', 'c']\n      \n      At index 0 diff: '\"a,b\"' != 'a,b'\n      Use -v to get more diff\n/root/lab/runs/suite/v2r_held/tests/test_h03_csv_line.py:10: assert ['\"a,b\"', 'c'] == ['a,b', 'c']\n=========================== short test summary info ============================\nFAILED ::test_quotes - assert ['\"a,b\"', 'c'] == ['a,b', 'c']\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 5.2,
+      "rag_chars": 1095,
+      "tail": "ed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_simple - AssertionError: assert ['a', 'c'] == ['a', '', 'c']\nFAILED ::test_quotes - assert ['\"a,b\",c'] == ['a,b', 'c']\nFAILED ::test_spaces_and_trailing - AssertionError: assert [' a ', ' b '] == ...\nFAILED ::test_unclosed - Failed: DID NOT RAISE ValueError\n4 failed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 5.5,
+      "rag_chars": 1095,
+      "tail": "ert ['\"a', 'b\"', 'c'] == ['a,b', 'c']\nE   Failed: DID NOT RAISE ValueError\n/root/lab/runs/suite/v2r_held/tests/test_h03_csv_line.py:18: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_quotes - assert ['\"a', 'b\"', 'c'] == ['a,b', 'c']\nFAILED ::test_unclosed - Failed: DID NOT RAISE ValueError\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 7.8,
+      "rag_chars": 1024,
+      "tail": ")\n     +  where True = delete('a')\n     +    where delete = <solution.TTLStore object at 0x72453749d760>.delete\n/root/lab/runs/suite/v2r_held/tests/test_h04_kv_ttl.py:26: AssertionError: assert (True is False)\n=========================== short test summary info ============================\nFAILED ::test_len_counts_only_alive_and_delete - AssertionError: assert (True...\n1 failed, 3 passed in 0.04s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 7.5,
+      "rag_chars": 1024,
+      "tail": ")\n     +  where True = delete('a')\n     +    where delete = <solution.TTLStore object at 0x798c666b19a0>.delete\n/root/lab/runs/suite/v2r_held/tests/test_h04_kv_ttl.py:26: AssertionError: assert (True is False)\n=========================== short test summary info ============================\nFAILED ::test_len_counts_only_alive_and_delete - AssertionError: assert (True...\n1 failed, 3 passed in 0.03s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 9.5,
+      "rag_chars": 1024,
+      "tail": "' == 2\n=========================== short test summary info ============================\nFAILED ::test_basic_and_default - AssertionError: assert ('1' == 1)\nFAILED ::test_expiry_boundary - AssertionError: assert '1' == 1\nFAILED ::test_len_counts_only_alive_and_delete - AssertionError: assert (True...\nFAILED ::test_overwrite_resets_ttl_and_invalid - AssertionError: assert '2' == 2\n4 failed in 0.04s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 3,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 8.0,
+      "rag_chars": 1024,
+      "tail": ")\n     +  where True = delete('a')\n     +    where delete = <solution.TTLStore object at 0x7ef89b1e9b20>.delete\n/root/lab/runs/suite/v2r_held/tests/test_h04_kv_ttl.py:26: AssertionError: assert (True is False)\n=========================== short test summary info ============================\nFAILED ::test_len_counts_only_alive_and_delete - AssertionError: assert (True...\n1 failed, 3 passed in 0.04s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 5,
+      "gen_seconds": 11.5,
+      "rag_chars": 1017,
+      "tail": "e_and_get - ValueError: \"NoteCreate\" object has no field \"id\"\nFAILED ::test_default_body_and_ids_increase - ValueError: \"NoteCreate\" object...\nFAILED ::test_validation - ValueError: \"NoteCreate\" object has no field \"id\"\nFAILED ::test_put_delete_404 - ValueError: \"NoteCreate\" object has no field \"id\"\nFAILED ::test_list_and_search - ValueError: \"NoteCreate\" object has no field ...\n5 failed in 0.39s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 1,
+      "ok": false,
+      "passed": 0,
+      "failed": 5,
+      "gen_seconds": 11.3,
+      "rag_chars": 1017,
+      "tail": "_h05_fastapi_notes.py:37: assert ([])\n=========================== short test summary info ============================\nFAILED ::test_create_and_get - assert 422 == 201\nFAILED ::test_default_body_and_ids_increase - KeyError: 'body'\nFAILED ::test_validation - AssertionError: assert 422 == 201\nFAILED ::test_put_delete_404 - KeyError: 'id'\nFAILED ::test_list_and_search - assert ([])\n5 failed in 0.36s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 5,
+      "gen_seconds": 11.6,
+      "rag_chars": 1017,
+      "tail": "===\nFAILED ::test_create_and_get - ValueError: \"Note\" object has no field \"id\"\nFAILED ::test_default_body_and_ids_increase - ValueError: \"Note\" object has n...\nFAILED ::test_validation - ValueError: \"Note\" object has no field \"id\"\nFAILED ::test_put_delete_404 - ValueError: \"Note\" object has no field \"id\"\nFAILED ::test_list_and_search - ValueError: \"Note\" object has no field \"id\"\n5 failed in 0.35s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 3,
+      "ok": false,
+      "passed": 4,
+      "failed": 1,
+      "gen_seconds": 11.3,
+      "rag_chars": 1017,
+      "tail": "d]> = post('/notes', json={'title': ''})\n     +      where post = <starlette.testclient.TestClient object at 0x7931e9d10e30>.post\n/root/lab/runs/suite/v2r_held/tests/test_h05_fastapi_notes.py:19: AssertionError: assert 201 == 422\n=========================== short test summary info ============================\nFAILED ::test_validation - AssertionError: assert 201 == 422\n1 failed, 4 passed in 0.37s\n"
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 4.8,
+      "rag_chars": 1146,
+      "tail": ""
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 3.7,
+      "rag_chars": 1146,
+      "tail": ""
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 4.0,
+      "rag_chars": 1146,
+      "tail": ""
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 3.8,
+      "rag_chars": 1146,
+      "tail": ""
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 8.1,
+      "rag_chars": 1309,
+      "tail": "==========================\n________________________ ERROR collecting test session _________________________\nE   NameError: name 'declarative_base' is not defined\n=========================== short test summary info ============================\nERROR  - NameError: name 'declarative_base' is not defined\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.32s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 1,
+      "ok": false,
+      "passed": 1,
+      "failed": 2,
+      "gen_seconds": 9.2,
+      "rag_chars": 1309,
+      "tail": "2r_held/h07_sqlalchemy_tags/s1/solution.py:41: KeyError: 'python'\nE   KeyError: 'a'\n/root/lab/runs/suite/v2r_held/h07_sqlalchemy_tags/s1/solution.py:41: KeyError: 'a'\n=========================== short test summary info ============================\nFAILED ::test_many_to_many_both_sides - KeyError: 'python'\nFAILED ::test_reuse_and_no_duplicate_association - KeyError: 'a'\n2 failed, 1 passed in 0.28s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 9.6,
+      "rag_chars": 1309,
+      "tail": "t ['a'] == ['a', 'b']\n      \n      Right contains one more item: 'b'\n      Use -v to get more diff\n/root/lab/runs/suite/v2r_held/tests/test_h07_sqlalchemy_tags.py:21: AssertionError: assert ['a'] == ['a', 'b']\n=========================== short test summary info ============================\nFAILED ::test_reuse_and_no_duplicate_association - AssertionError: assert ['a...\n1 failed, 2 passed in 0.27s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 8.3,
+      "rag_chars": 1309,
+      "tail": "==========================\n________________________ ERROR collecting test session _________________________\nE   NameError: name 'declarative_base' is not defined\n=========================== short test summary info ============================\nERROR  - NameError: name 'declarative_base' is not defined\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.34s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 0,
+      "ok": false,
+      "passed": 7,
+      "failed": 5,
+      "gen_seconds": 10.1,
+      "rag_chars": 1148,
+      "tail": "t test summary info ============================\nFAILED ::test_parse_ok - AssertionError: assert 3600 == 5400\nFAILED ::test_parse_invalid[30m1h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_parse_invalid[1h1h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_parse_invalid[h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_roundtrip - AssertionError: assert 0 == 59\n5 failed, 7 passed in 0.02s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 1,
+      "ok": false,
+      "passed": 10,
+      "failed": 2,
+      "gen_seconds": 12.9,
+      "rag_chars": 1148,
+      "tail": "ror: Invalid duration format\nE   ValueError: Invalid duration format\n/root/lab/runs/suite/v2r_held/h08_duration/s1/solution.py:16: ValueError: Invalid duration format\n=========================== short test summary info ============================\nFAILED ::test_parse_ok - ValueError: Invalid duration format\nFAILED ::test_roundtrip - ValueError: Invalid duration format\n2 failed, 10 passed in 0.02s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 2,
+      "ok": false,
+      "passed": 9,
+      "failed": 3,
+      "gen_seconds": 8.2,
+      "rag_chars": 1148,
+      "tail": "ValueError: invalid literal for int() with base 10: '59m59'\n=========================== short test summary info ============================\nFAILED ::test_parse_ok - ValueError: invalid literal for int() with base 10: ...\nFAILED ::test_parse_invalid[1h1h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_roundtrip - ValueError: invalid literal for int() with base 10:...\n3 failed, 9 passed in 0.02s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 3,
+      "ok": false,
+      "passed": 6,
+      "failed": 6,
+      "gen_seconds": 9.6,
+      "rag_chars": 1148,
+      "tail": "tionError: assert 3600 == 5400\nFAILED ::test_parse_invalid[1.5h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_parse_invalid[30m1h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_parse_invalid[1h1h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_parse_invalid[1h 30m] - Failed: DID NOT RAISE ValueError\nFAILED ::test_roundtrip - AssertionError: assert 3540 == 3599\n6 failed, 6 passed in 0.02s\n"
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 9.1,
+      "rag_chars": 808,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 10.2,
+      "rag_chars": 808,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 10.4,
+      "rag_chars": 808,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 10.3,
+      "rag_chars": 808,
+      "tail": ""
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 9.9,
+      "rag_chars": 1051,
+      "tail": ""
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 9.9,
+      "rag_chars": 1051,
+      "tail": ""
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 2,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 10.1,
+      "rag_chars": 1051,
+      "tail": "tribute 'timezone'. Did you mean: 'astimezone'?\n=========================== short test summary info ============================\nFAILED ::test_pair_claims - AttributeError: type object 'datetime.datetime' h...\nFAILED ::test_verify_access_only - AttributeError: type object 'datetime.date...\nFAILED ::test_refresh_flow - AttributeError: type object 'datetime.datetime' ...\n3 failed, 1 passed in 0.04s\n"
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 3,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 10.5,
+      "rag_chars": 1051,
+      "tail": ") missing 1 required positional argument: 'jwt'\n=========================== short test summary info ============================\nFAILED ::test_verify_access_only - TypeError: PyJWT.decode() missing 1 requir...\nFAILED ::test_refresh_flow - TypeError: PyJWT.decode() missing 1 required pos...\nFAILED ::test_expired_refresh - TypeError: PyJWT.decode() missing 1 required ...\n3 failed, 1 passed in 0.04s\n"
+    }
+  ]
+}

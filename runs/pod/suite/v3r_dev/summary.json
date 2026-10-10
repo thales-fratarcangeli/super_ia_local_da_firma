@@ -1,0 +1,569 @@
+{
+  "name": "v3r_dev",
+  "model": "elias-v3",
+  "tasks_ok": 28,
+  "total": 56,
+  "pass_rate": 0.5,
+  "results": [
+    {
+      "task": "t01_slugify",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 4.9,
+      "rag_chars": 983,
+      "tail": ""
+    },
+    {
+      "task": "t01_slugify",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 2.9,
+      "rag_chars": 983,
+      "tail": ""
+    },
+    {
+      "task": "t01_slugify",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 2.8,
+      "rag_chars": 983,
+      "tail": ""
+    },
+    {
+      "task": "t01_slugify",
+      "sample": 3,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 2.7,
+      "rag_chars": 983,
+      "tail": "0: AssertionError: assert 'oo-ar-baz' == 'foo-bar-baz'\n=========================== short test summary info ============================\nFAILED ::test_basic - AssertionError: assert 'ello-orld' == 'hello-world'\nFAILED ::test_accents - AssertionError: assert 'cao-e-oracao' == 'acao-e-cora...\nFAILED ::test_symbols_and_edges - AssertionError: assert 'oo-ar-baz' == 'foo-...\n3 failed, 1 passed in 0.01s\n"
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 0,
+      "ok": false,
+      "passed": 6,
+      "failed": 1,
+      "gen_seconds": 4.9,
+      "rag_chars": 866,
+      "tail": "items': [0, 1, 2, 3, 4, 5, ...]}\n      Use -v to get more diff\n/root/lab/runs/suite/v3r_dev/tests/test_t02_paginate.py:6: AssertionError: assert {'items': [0,...age_size': 10} == {'items': [0,...age_size': 10}\n=========================== short test summary info ============================\nFAILED ::test_first_page - AssertionError: assert {'items': [0,...age_size': ...\n1 failed, 6 passed in 0.01s\n"
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 1,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 4.2,
+      "rag_chars": 866,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 2,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 4.5,
+      "rag_chars": 866,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 3,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 5.3,
+      "rag_chars": 866,
+      "tail": ""
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 5.7,
+      "rag_chars": 977,
+      "tail": "de byte 0xc3 in position 0: unexpected end of data\n/root/lab/runs/suite/v3r_dev/t03_querystring/s0/solution.py:18: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc3 in position 0: unexpected end of data\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - UnicodeDecodeError: 'utf-8' codec can't...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 24.4,
+      "rag_chars": 977,
+      "tail": "]} != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/v3r_dev/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a b', 'c20d', 'C3A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a b', 'c...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 2,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 16.4,
+      "rag_chars": 977,
+      "tail": "]} != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/v3r_dev/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a b', 'c20d', 'C3A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a b', 'c...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 3,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 21.2,
+      "rag_chars": 977,
+      "tail": "]} != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/v3r_dev/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a+b',...d', '%C3%A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a+b',......\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t04_lru",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 4.8,
+      "rag_chars": 775,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 4.9,
+      "rag_chars": 775,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 4.7,
+      "rag_chars": 775,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 4.6,
+      "rag_chars": 775,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.9,
+      "rag_chars": 960,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.9,
+      "rag_chars": 960,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.8,
+      "rag_chars": 960,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 7.1,
+      "rag_chars": 960,
+      "tail": ""
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 4.3,
+      "rag_chars": 1051,
+      "tail": "4: KeyError: 'sub'\n=========================== short test summary info ============================\nFAILED ::test_roundtrip - AttributeError: type object 'datetime.datetime' has...\nFAILED ::test_wrong_secret_and_garbage - AttributeError: type object 'datetim...\nFAILED ::test_expired - AttributeError: type object 'datetime.datetime' has n...\nFAILED ::test_no_sub - KeyError: 'sub'\n4 failed in 0.05s\n"
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 4.7,
+      "rag_chars": 1051,
+      "tail": ""
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 4.4,
+      "rag_chars": 1051,
+      "tail": "4: KeyError: 'sub'\n=========================== short test summary info ============================\nFAILED ::test_roundtrip - AttributeError: type object 'datetime.datetime' has...\nFAILED ::test_wrong_secret_and_garbage - AttributeError: type object 'datetim...\nFAILED ::test_expired - AttributeError: type object 'datetime.datetime' has n...\nFAILED ::test_no_sub - KeyError: 'sub'\n4 failed in 0.05s\n"
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 4.4,
+      "rag_chars": 1051,
+      "tail": "5: KeyError: 'sub'\n=========================== short test summary info ============================\nFAILED ::test_roundtrip - AttributeError: type object 'datetime.datetime' has...\nFAILED ::test_wrong_secret_and_garbage - AttributeError: type object 'datetim...\nFAILED ::test_expired - AttributeError: type object 'datetime.datetime' has n...\nFAILED ::test_no_sub - KeyError: 'sub'\n4 failed in 0.04s\n"
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 11.9,
+      "rag_chars": 1035,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 12.0,
+      "rag_chars": 1035,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 11.8,
+      "rag_chars": 1035,
+      "tail": ":2: in <module>\n    from solution import TodoRepo\nE     File \"/root/lab/runs/suite/v3r_dev/t07_sqlite_repo/s2/solution.py\", line 43\nE       self self.conn.commit()\nE            ^^^^\nE   SyntaxError: invalid syntax\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.16s\n"
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 12.0,
+      "rag_chars": 1035,
+      "tail": ""
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 0,
+      "ok": true,
+      "passed": 2,
+      "failed": 0,
+      "gen_seconds": 7.3,
+      "rag_chars": 1309,
+      "tail": ""
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 1,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 7.0,
+      "rag_chars": 1309,
+      "tail": "== ERRORS ====================================\n________________________ ERROR collecting test session _________________________\nE   NameError: name 'mapped' is not defined\n=========================== short test summary info ============================\nERROR  - NameError: name 'mapped' is not defined\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.33s\n"
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 9.4,
+      "rag_chars": 1309,
+      "tail": "on import Base, User, Project, Task, make_session\nsolution.py:3: in <module>\n    from typing import Mapped, List, Optional\nE   ImportError: cannot import name 'Mapped' from 'typing' (/usr/lib/python3.12/typing.py)\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.36s\n"
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 7.2,
+      "rag_chars": 1309,
+      "tail": "on import Base, User, Project, Task, make_session\nsolution.py:3: in <module>\n    from typing import Mapped, List, Optional\nE   ImportError: cannot import name 'Mapped' from 'typing' (/usr/lib/python3.12/typing.py)\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.33s\n"
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 5.8,
+      "rag_chars": 1165,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 4.9,
+      "rag_chars": 1165,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 4.4,
+      "rag_chars": 1165,
+      "tail": "root/lab/runs/suite/v3r_dev/t09_fastapi_auth/s2/solution.py:15: AttributeError: 'NoneType' object has no attribute 'credentials'\n=========================== short test summary info ============================\nFAILED ::test_missing_header_is_401 - AttributeError: 'NoneType' object has n...\nFAILED ::test_wrong_token_and_scheme - AttributeError: 'NoneType' object has ...\n2 failed, 2 passed in 0.32s\n"
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 5.6,
+      "rag_chars": 1165,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 0,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 6.0,
+      "rag_chars": 1017,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 1,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 6.0,
+      "rag_chars": 1017,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 2,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 6.0,
+      "rag_chars": 1017,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 3,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 6.2,
+      "rag_chars": 1017,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 5.5,
+      "rag_chars": 703,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 5.6,
+      "rag_chars": 703,
+      "tail": "(3, 4)] == [(3, 4), (1, 2)]\n      \n      At index 0 diff: (1, 2) != (3, 4)\n      Use -v to get more diff\n/root/lab/runs/suite/v3r_dev/tests/test_t11_intervals.py:14: assert [(1, 2), (3, 4)] == [(3, 4), (1, 2)]\n=========================== short test summary info ============================\nFAILED ::test_empty_and_input_untouched - assert [(1, 2), (3, 4)] == [(3, 4),...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 5.3,
+      "rag_chars": 703,
+      "tail": "(1, 2) != (3, 4)\n      Use -v to get more diff\n/root/lab/runs/suite/v3r_dev/tests/test_t11_intervals.py:14: assert [(1, 2), (3, 4)] == [(3, 4), (1, 2)]\n=========================== short test summary info ============================\nFAILED ::test_merge - assert [(1, 8)] == [(1, 4), (5, 8)]\nFAILED ::test_empty_and_input_untouched - assert [(1, 2), (3, 4)] == [(3, 4),...\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 3,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 4.2,
+      "rag_chars": 703,
+      "tail": "               [100%]\n=================================== FAILURES ===================================\nE   Failed: DID NOT RAISE ValueError\n/root/lab/runs/suite/v3r_dev/tests/test_t11_intervals.py:17: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_invalid - Failed: DID NOT RAISE ValueError\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 1,
+      "gen_seconds": 5.5,
+      "rag_chars": 806,
+      "tail": ", False]\n      \n      At index 1 diff: False != True\n      Use -v to get more diff\n/root/lab/runs/suite/v3r_dev/tests/test_t12_token_bucket.py:14: assert [True, False, True, False] == [True, True, True, False]\n=========================== short test summary info ============================\nFAILED ::test_burst_and_refill - assert [True, False, True, False] == [True, ...\n1 failed, 1 passed in 0.01s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 1,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 65.0,
+      "rag_chars": 806,
+      "tail": "okens, last_time, rate, capacity, clock, tokens, last_time, rate, capacity, clock, tokens, last_time, rate, capacity, clock, tokens, last_time, rate, capacity\nE              ^\nE   SyntaxError: '(' was never closed\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.14s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 2,
+      "ok": false,
+      "passed": 1,
+      "failed": 1,
+      "gen_seconds": 3.6,
+      "rag_chars": 806,
+      "tail": "============\nE   assert (False is True)\n     +  where False = allow()\n     +    where allow = <solution.RateLimiter object at 0x73144d4faab0>.allow\n/root/lab/runs/suite/v3r_dev/tests/test_t12_token_bucket.py:12: assert (False is True)\n=========================== short test summary info ============================\nFAILED ::test_burst_and_refill - assert (False is True)\n1 failed, 1 passed in 0.09s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 3,
+      "ok": false,
+      "passed": 1,
+      "failed": 1,
+      "gen_seconds": 5.3,
+      "rag_chars": 806,
+      "tail": "============\nE   assert (False is True)\n     +  where False = allow()\n     +    where allow = <solution.RateLimiter object at 0x7df8132925a0>.allow\n/root/lab/runs/suite/v3r_dev/tests/test_t12_token_bucket.py:12: assert (False is True)\n=========================== short test summary info ============================\nFAILED ::test_burst_and_refill - assert (False is True)\n1 failed, 1 passed in 0.01s\n"
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 0,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 5.5,
+      "rag_chars": 703,
+      "tail": "sort/s0/solution.py:31: ValueError: Ciclo detectado\nE   ValueError: Ciclo detectado\n/root/lab/runs/suite/v3r_dev/t13_toposort/s0/solution.py:31: ValueError: Ciclo detectado\n=========================== short test summary info ============================\nFAILED ::test_basic - ValueError: Ciclo detectado\nFAILED ::test_implicit_nodes_and_ties - ValueError: Ciclo detectado\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 6.3,
+      "rag_chars": 703,
+      "tail": "_toposort/s1/solution.py:36: ValueError: Cycle detected\nE   ValueError: Cycle detected\n/root/lab/runs/suite/v3r_dev/t13_toposort/s1/solution.py:36: ValueError: Cycle detected\n=========================== short test summary info ============================\nFAILED ::test_basic - ValueError: Cycle detected\nFAILED ::test_implicit_nodes_and_ties - ValueError: Cycle detected\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 5.5,
+      "rag_chars": 703,
+      "tail": "sort/s2/solution.py:29: ValueError: Ciclo detectado\nE   ValueError: Ciclo detectado\n/root/lab/runs/suite/v3r_dev/t13_toposort/s2/solution.py:29: ValueError: Ciclo detectado\n=========================== short test summary info ============================\nFAILED ::test_basic - ValueError: Ciclo detectado\nFAILED ::test_implicit_nodes_and_ties - ValueError: Ciclo detectado\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 5.5,
+      "rag_chars": 703,
+      "tail": "_toposort/s3/solution.py:29: ValueError: Cycle detected\nE   ValueError: Cycle detected\n/root/lab/runs/suite/v3r_dev/t13_toposort/s3/solution.py:29: ValueError: Cycle detected\n=========================== short test summary info ============================\nFAILED ::test_basic - ValueError: Cycle detected\nFAILED ::test_implicit_nodes_and_ties - ValueError: Cycle detected\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 4.4,
+      "rag_chars": 1245,
+      "tail": "s/test_t14_pydantic.py:3: in <module>\n    from solution import SignUp\nsolution.py:2: in <module>\n    from enum import Literal\nE   ImportError: cannot import name 'Literal' from 'enum' (/usr/lib/python3.12/enum.py)\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.18s\n"
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 7.2,
+      "rag_chars": 1245,
+      "tail": ""
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 4.9,
+      "rag_chars": 1245,
+      "tail": "\n=================================== FAILURES ===================================\nE   Failed: DID NOT RAISE ValidationError\n/root/lab/runs/suite/v3r_dev/tests/test_t14_pydantic.py:11: Failed: DID NOT RAISE ValidationError\n=========================== short test summary info ============================\nFAILED ::test_username_rules - Failed: DID NOT RAISE ValidationError\n1 failed, 2 passed in 0.09s\n"
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 5.8,
+      "rag_chars": 1245,
+      "tail": "\n=================================== FAILURES ===================================\nE   Failed: DID NOT RAISE ValidationError\n/root/lab/runs/suite/v3r_dev/tests/test_t14_pydantic.py:11: Failed: DID NOT RAISE ValidationError\n=========================== short test summary info ============================\nFAILED ::test_username_rules - Failed: DID NOT RAISE ValidationError\n1 failed, 2 passed in 0.15s\n"
+    }
+  ]
+}

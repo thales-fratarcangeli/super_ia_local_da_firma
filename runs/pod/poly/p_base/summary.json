@@ -1,0 +1,502 @@
+{
+  "name": "p_base",
+  "model": "qwen3:8b",
+  "rag": false,
+  "pass_rate": 0.542,
+  "total": 48,
+  "por_linguagem": {
+    "python": 0.5,
+    "js": 0.375,
+    "c": 0.625,
+    "go": 0.125,
+    "java": 0.75,
+    "sql": 0.875
+  },
+  "por_nivel": {
+    "1": 0.75,
+    "2": 0.591,
+    "3": 0.286
+  },
+  "results": [
+    {
+      "id": "py1_two_sum",
+      "lang": "python",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 53.0,
+      "tail": ""
+    },
+    {
+      "id": "py1_two_sum",
+      "lang": "python",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 63.8,
+      "tail": ""
+    },
+    {
+      "id": "js1_case",
+      "lang": "js",
+      "area": "strings",
+      "level": 1,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 66.5,
+      "tail": "r:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: '_hello_world',\n  expected: 'hello_world',\n  operator: 'strictEqual'\n}\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "js1_case",
+      "lang": "js",
+      "area": "strings",
+      "level": 1,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 63.9,
+      "tail": ""
+    },
+    {
+      "id": "c1_bits",
+      "lang": "c",
+      "area": "sistemas / bits",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 77.1,
+      "tail": ""
+    },
+    {
+      "id": "c1_bits",
+      "lang": "c",
+      "area": "sistemas / bits",
+      "level": 1,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 65.0,
+      "tail": ""
+    },
+    {
+      "id": "go1_fib",
+      "lang": "go",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 66.1,
+      "tail": "--- FAIL: TestFibErrors (0.00s)\n    solution_test.go:19: Fib(93) deveria dar erro\nFAIL\nFAIL\tsolution\t0.045s\nFAIL\n"
+    },
+    {
+      "id": "go1_fib",
+      "lang": "go",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 62.8,
+      "tail": "--- FAIL: TestFibErrors (0.00s)\n    solution_test.go:19: Fib(93) deveria dar erro\nFAIL\nFAIL\tsolution\t0.002s\nFAIL\n"
+    },
+    {
+      "id": "java1_strings",
+      "lang": "java",
+      "area": "strings",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 72.0,
+      "tail": ""
+    },
+    {
+      "id": "java1_strings",
+      "lang": "java",
+      "area": "strings",
+      "level": 1,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 79.5,
+      "tail": ""
+    },
+    {
+      "id": "sql1_avg",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 28.6,
+      "tail": ""
+    },
+    {
+      "id": "sql1_avg",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 1,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 30.1,
+      "tail": ""
+    },
+    {
+      "id": "py2_cidr",
+      "lang": "python",
+      "area": "redes",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 37.1,
+      "tail": ""
+    },
+    {
+      "id": "py2_cidr",
+      "lang": "python",
+      "area": "redes",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 47.3,
+      "tail": ""
+    },
+    {
+      "id": "js2_route",
+      "lang": "js",
+      "area": "web",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 138.4,
+      "tail": "er:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: null,\n  expected: { x: '1', y: '2' },\n  operator: 'deepStrictEqual'\n}\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "js2_route",
+      "lang": "js",
+      "area": "web",
+      "level": 2,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 118.3,
+      "tail": "er:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: null,\n  expected: { x: '1', y: '2' },\n  operator: 'deepStrictEqual'\n}\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "js3_retry",
+      "lang": "js",
+      "area": "assíncrono",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 83.9,
+      "tail": ""
+    },
+    {
+      "id": "js3_retry",
+      "lang": "js",
+      "area": "assíncrono",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 46.7,
+      "tail": ""
+    },
+    {
+      "id": "c2_strings",
+      "lang": "c",
+      "area": "strings / memória",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 72.0,
+      "tail": ""
+    },
+    {
+      "id": "c2_strings",
+      "lang": "c",
+      "area": "strings / memória",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 66.3,
+      "tail": ""
+    },
+    {
+      "id": "c3_stack",
+      "lang": "c",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 78.4,
+      "tail": ""
+    },
+    {
+      "id": "c3_stack",
+      "lang": "c",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 72.6,
+      "tail": ""
+    },
+    {
+      "id": "go2_wordfreq",
+      "lang": "go",
+      "area": "texto",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 84.6,
+      "tail": ""
+    },
+    {
+      "id": "go2_wordfreq",
+      "lang": "go",
+      "area": "texto",
+      "level": 2,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 72.5,
+      "tail": "FAIL\tsolution [build failed]\nFAIL\n# solution [solution.test]\n./solution.go:13:14: undefined: unicode.IsLetterOrDigit\n"
+    },
+    {
+      "id": "go3_sumpar",
+      "lang": "go",
+      "area": "concorrência",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 92.8,
+      "tail": "FAIL\tsolution [build failed]\nFAIL\n# solution [solution.test]\n./solution.go:20:2: numChunks declared and not used\n"
+    },
+    {
+      "id": "go3_sumpar",
+      "lang": "go",
+      "area": "concorrência",
+      "level": 2,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 88.7,
+      "tail": "FAIL\tsolution [build failed]\nFAIL\n# solution [solution.test]\n./solution.go:4:2: \"math\" imported and not used\n"
+    },
+    {
+      "id": "java2_topk",
+      "lang": "java",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 53.9,
+      "tail": ""
+    },
+    {
+      "id": "java2_topk",
+      "lang": "java",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 54.0,
+      "tail": ""
+    },
+    {
+      "id": "java3_account",
+      "lang": "java",
+      "area": "orientação a objetos",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 51.7,
+      "tail": "FALHOU: transfer insuficiente\n"
+    },
+    {
+      "id": "java3_account",
+      "lang": "java",
+      "area": "orientação a objetos",
+      "level": 2,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 54.5,
+      "tail": "FALHOU: transfer insuficiente\n"
+    },
+    {
+      "id": "sql2_noorders",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 54.2,
+      "tail": ""
+    },
+    {
+      "id": "sql2_noorders",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 53.8,
+      "tail": ""
+    },
+    {
+      "id": "sql3_topper",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 57.6,
+      "tail": ""
+    },
+    {
+      "id": "sql3_topper",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 58.2,
+      "tail": "esperado: [('FIN', 'Edu', 9000), ('RH', 'Duda', 4400), ('TI', 'Bia', 7000)]\nobtido:   [('FIN', 'Edu', 9000)]\n"
+    },
+    {
+      "id": "py3_parallel",
+      "lang": "python",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 78.8,
+      "tail": "               [100%]\n=================================== FAILURES ===================================\nE   assert [5, 3, 4, 2] == [2, 3, 4, 5]\n      \n      At index 0 diff: 5 != 2\n      Use -v to get more diff\n/root/lab/runs/poly/p_base/py3_parallel/s0/test_solution.py:15: assert [5, 3, 4, 2] == [2, 3, 4, 5]\n=========================== short test summary info ============================\nFAILED test_solution.py::test_really_concurrent - assert [5, 3, 4, 2] == [2, ...\n1 failed, 3 passed in 0.27s\n"
+    },
+    {
+      "id": "py3_parallel",
+      "lang": "python",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 70.6,
+      "tail": "======\nE   _queue.Empty\n/usr/lib/python3.12/queue.py:168: _queue.Empty\nE   _queue.Empty\n/usr/lib/python3.12/queue.py:168: _queue.Empty\nE   _queue.Empty\n/usr/lib/python3.12/queue.py:168: _queue.Empty\n=========================== short test summary info ============================\nFAILED test_solution.py::test_order_and_values - _queue.Empty\nFAILED test_solution.py::test_really_concurrent - _queue.Empty\nFAILED test_solution.py::test_respects_worker_limit - _queue.Empty\n3 failed, 1 passed in 0.36s\n"
+    },
+    {
+      "id": "py4_calc",
+      "lang": "python",
+      "area": "compiladores",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 104.0,
+      "tail": "t of range\n/root/lab/runs/poly/p_base/py4_calc/s0/solution.py:33: IndexError: list index out of range\nE   Failed: DID NOT RAISE ValueError\n/root/lab/runs/poly/p_base/py4_calc/s0/test_solution.py:16: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED test_solution.py::test_invalid[2+] - IndexError: list index out of range\nFAILED test_solution.py::test_invalid[2 3] - Failed: DID NOT RAISE ValueError\n2 failed, 21 passed in 0.04s\n"
+    },
+    {
+      "id": "py4_calc",
+      "lang": "python",
+      "area": "compiladores",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 103.1,
+      "tail": "2 ± 2.0e-06\nFAILED test_solution.py::test_values[2*-3--6] - ValueError\nFAILED test_solution.py::test_values[-(1+2)--3] - ValueError\nFAILED test_solution.py::test_values[1.5*2-3] - ValueError\nFAILED test_solution.py::test_values[10-2-3-5] - assert 12 == 5 ± 5.0e-06\nFAILED test_solution.py::test_values[--2-2] - assert 4 == 2 ± 2.0e-06\nFAILED test_solution.py::test_zero_division - ValueError\nFAILED test_solution.py::test_invalid[2 3] - Failed: DID NOT RAISE ValueError\n12 failed, 11 passed in 0.10s\n"
+    },
+    {
+      "id": "js4_emitter",
+      "lang": "js",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 93.4,
+      "tail": "nternal/modules/cjs/loader:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 1,\n  expected: 0,\n  operator: 'strictEqual'\n}\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "js4_emitter",
+      "lang": "js",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 94.2,
+      "tail": "nternal/modules/cjs/loader:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 1,\n  expected: 0,\n  operator: 'strictEqual'\n}\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "c4_parse_int",
+      "lang": "c",
+      "area": "parsing / overflow",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 77.0,
+      "tail": "t: test.c:10: main: Assertion `ok(\"2147483647\", INT_MAX) && ok(\"-2147483648\", INT_MIN)' failed.\n"
+    },
+    {
+      "id": "c4_parse_int",
+      "lang": "c",
+      "area": "parsing / overflow",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 78.8,
+      "tail": "t: test.c:10: main: Assertion `ok(\"2147483647\", INT_MAX) && ok(\"-2147483648\", INT_MIN)' failed.\n"
+    },
+    {
+      "id": "go4_lru",
+      "lang": "go",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 89.9,
+      "tail": "da0?, 0xc00014a5a0?})\n\t/usr/lib/go-1.22/src/runtime/panic.go:770 +0x132\nsolution.(*LRU).Put(0xc000112738, {0x53d65e, 0x1}, 0x3)\n\t/root/lab/runs/poly/p_base/go4_lru/s0/solution.go:47 +0x41c\nsolution.TestLRU(0xc0001644e0)\n\t/root/lab/runs/poly/p_base/go4_lru/s0/solution_test.go:13 +0x125\ntesting.tRunner(0xc0001644e0, 0x549bd8)\n\t/usr/lib/go-1.22/src/testing/testing.go:1689 +0xfb\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/lib/go-1.22/src/testing/testing.go:1742 +0x390\nFAIL\tsolution\t0.005s\nFAIL\n"
+    },
+    {
+      "id": "go4_lru",
+      "lang": "go",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 85.8,
+      "tail": "da0?, 0xc00014a5a0?})\n\t/usr/lib/go-1.22/src/runtime/panic.go:770 +0x132\nsolution.(*LRU).Put(0xc000112738, {0x53d65e, 0x1}, 0x3)\n\t/root/lab/runs/poly/p_base/go4_lru/s1/solution.go:48 +0x41c\nsolution.TestLRU(0xc0001644e0)\n\t/root/lab/runs/poly/p_base/go4_lru/s1/solution_test.go:13 +0x125\ntesting.tRunner(0xc0001644e0, 0x549bd8)\n\t/usr/lib/go-1.22/src/testing/testing.go:1689 +0xfb\ncreated by testing.(*T).Run in goroutine 1\n\t/usr/lib/go-1.22/src/testing/testing.go:1742 +0x390\nFAIL\tsolution\t0.005s\nFAIL\n"
+    },
+    {
+      "id": "java4_counter",
+      "lang": "java",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 64.4,
+      "tail": ""
+    },
+    {
+      "id": "java4_counter",
+      "lang": "java",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 69.4,
+      "tail": ""
+    },
+    {
+      "id": "sql4_running",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 7.1,
+      "tail": ""
+    },
+    {
+      "id": "sql4_running",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 3,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 6.8,
+      "tail": ""
+    }
+  ]
+}

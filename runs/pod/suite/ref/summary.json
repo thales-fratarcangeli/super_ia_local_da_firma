@@ -1,0 +1,135 @@
+{
+  "name": "ref",
+  "model": "--reference",
+  "tasks_ok": 14,
+  "total": 14,
+  "pass_rate": 1.0,
+  "results": [
+    {
+      "task": "t01_slugify",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 0,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 0,
+      "ok": true,
+      "passed": 2,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 0,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 0,
+      "ok": true,
+      "passed": 2,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 0,
+      "tail": ""
+    }
+  ]
+}

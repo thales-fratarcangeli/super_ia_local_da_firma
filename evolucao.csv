@@ -1,4 +1,11 @@
 ciclo,rotulo,suite,pct,tipo
 0,Aluno cru (qwen3:8b),dev,43,aluno
+0,Aluno cru (qwen3:8b),heldout,35,aluno
+0,Aluno cru (qwen3:8b),poly,54,aluno
 1,+ RAG v1,dev,59,aluno
+2,+ RAG v2,dev,68,aluno
+2,+ RAG v2,heldout,40,aluno
+3,+ LoRA v2,dev,48,aluno
+3,+ LoRA v2,heldout,12,aluno
+3,+ LoRA v2,poly,52,aluno
 teto,Professor 32B,dev,79,teto

@@ -1,0 +1,135 @@
+{
+  "name": "g_q25c32b",
+  "model": "qwen2.5-coder:32b",
+  "tasks_ok": 11,
+  "total": 14,
+  "pass_rate": 0.786,
+  "results": [
+    {
+      "task": "t01_slugify",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 72.2,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 0,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 6.3,
+      "tail": ""
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 8.4,
+      "tail": " != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/g_q25c32b/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a b',...d', '%C3%A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a b',......\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t04_lru",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 8.0,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 0,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 13.0,
+      "tail": "name 'binascii' is not defined. Did you forget to import 'binascii'\n/root/lab/runs/suite/g_q25c32b/t05_password/s0/solution.py:20: NameError: name 'binascii' is not defined. Did you forget to import 'binascii'\n=========================== short test summary info ============================\nFAILED ::test_malformed - NameError: name 'binascii' is not defined. Did you ...\n1 failed, 2 passed in 0.21s\n"
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 8.1,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 21.1,
+      "tail": ""
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 0,
+      "ok": true,
+      "passed": 2,
+      "failed": 0,
+      "gen_seconds": 15.4,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 6.3,
+      "tail": ": 'HTTPBearer' object has no attribute 'scheme'\n=========================== short test summary info ============================\nFAILED ::test_ok - AttributeError: 'HTTPBearer' object has no attribute 'scheme'\nFAILED ::test_missing_header_is_401 - AttributeError: 'HTTPBearer' object has...\nFAILED ::test_wrong_token_and_scheme - AttributeError: 'HTTPBearer' object ha...\n3 failed, 1 passed in 0.40s\n"
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 0,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 9.3,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 7.1,
+      "tail": ""
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 0,
+      "ok": true,
+      "passed": 2,
+      "failed": 0,
+      "gen_seconds": 7.2,
+      "tail": ""
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 11.1,
+      "tail": ""
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 8.2,
+      "tail": ""
+    }
+  ]
+}

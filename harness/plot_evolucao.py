@@ -37,7 +37,7 @@ for r in tetos:
     svg.append(f'<line x1="{L}" y1="{y(p)}" x2="{W - R}" y2="{y(p)}" stroke="#9ca3af" stroke-dasharray="6 4"/>')
     svg.append(f'<text x="{W - R}" y="{y(p) - 6}" font-size="11" text-anchor="end" fill="#6b7280">{r["rotulo"]}: {p:.0f}%</text>')
 
-series = [("dev", "#2563eb", "suíte de desenvolvimento"), ("heldout", "#ea580c", "suíte inédita (heldout)")]
+series = [("dev", "#2563eb", "suíte de desenvolvimento"), ("heldout", "#ea580c", "suíte inédita"), ("poly", "#16a34a", "multilinguagem")]
 for suite, cor, nome in series:
     pts = [(rotulos.index(r["rotulo"]), float(r["pct"])) for r in alunos if r["suite"] == suite]
     if not pts:
@@ -53,8 +53,8 @@ for i, rot in enumerate(rotulos):
 ly = H - 22
 for k, (suite, cor, nome) in enumerate(series):
     if any(r["suite"] == suite for r in alunos):
-        svg.append(f'<rect x="{L + k * 250}" y="{ly - 9}" width="14" height="4" fill="{cor}"/>')
-        svg.append(f'<text x="{L + k * 250 + 20}" y="{ly - 3}" font-size="12" fill="#374151">{nome}</text>')
+        svg.append(f'<rect x="{L + k * 230}" y="{ly - 9}" width="14" height="4" fill="{cor}"/>')
+        svg.append(f'<text x="{L + k * 230 + 20}" y="{ly - 3}" font-size="12" fill="#374151">{nome}</text>')
 svg.append("</svg>")
 (ROOT / "evolucao.svg").write_text("\n".join(svg), encoding="utf-8")
 print("evolucao.svg gerado com", len(alunos), "pontos")

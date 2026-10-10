@@ -1,0 +1,569 @@
+{
+  "name": "c2_rag_v2",
+  "model": "qwen3:8b",
+  "tasks_ok": 38,
+  "total": 56,
+  "pass_rate": 0.679,
+  "results": [
+    {
+      "task": "t01_slugify",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 9.9,
+      "rag_chars": 983,
+      "tail": ""
+    },
+    {
+      "task": "t01_slugify",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 8.8,
+      "rag_chars": 983,
+      "tail": ""
+    },
+    {
+      "task": "t01_slugify",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 8.6,
+      "rag_chars": 983,
+      "tail": ""
+    },
+    {
+      "task": "t01_slugify",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 8.8,
+      "rag_chars": 983,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 0,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 18.0,
+      "rag_chars": 866,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 1,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 16.8,
+      "rag_chars": 866,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 2,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 18.7,
+      "rag_chars": 866,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 3,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 17.5,
+      "rag_chars": 866,
+      "tail": ""
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 25.6,
+      "rag_chars": 977,
+      "tail": " byte 0xc3 in position 0: unexpected end of data\n/root/lab/runs/suite/c2_rag_v2/t03_querystring/s0/solution.py:30: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc3 in position 0: unexpected end of data\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - UnicodeDecodeError: 'utf-8' codec can't...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 31.8,
+      "rag_chars": 977,
+      "tail": " != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/c2_rag_v2/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a b',...d', '%C3%A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a b',......\n1 failed, 3 passed in 0.05s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 2,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 23.9,
+      "rag_chars": 977,
+      "tail": " != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/c2_rag_v2/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a b', 'c20d', 'C3A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a b', 'c...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 29.3,
+      "rag_chars": 977,
+      "tail": "==== short test summary info ============================\nFAILED ::test_basic - AssertionError: assert {'a': [''], 'b': ['']} == {'a': ...\nFAILED ::test_leading_question_and_empty - AssertionError: assert {'x': ['']}...\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['', '', '...\nFAILED ::test_no_equals_and_first_equals - AssertionError: assert {'flag': ['...\n4 failed in 0.07s\n"
+    },
+    {
+      "task": "t04_lru",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 14.8,
+      "rag_chars": 775,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 14.0,
+      "rag_chars": 775,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 16.4,
+      "rag_chars": 775,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 22.7,
+      "rag_chars": 775,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 2,
+      "gen_seconds": 30.2,
+      "rag_chars": 960,
+      "tail": "_rag_v2/t05_password/s0/solution.py:11: AttributeError: module 'base64' has no attribute 'b65encode'. Did you mean: 'b64encode'?\n=========================== short test summary info ============================\nFAILED ::test_roundtrip - AttributeError: module 'base64' has no attribute 'b...\nFAILED ::test_format_and_salt - AttributeError: module 'base64' has no attrib...\n2 failed, 1 passed in 1.50s\n"
+    },
+    {
+      "task": "t05_password",
+      "sample": 1,
+      "ok": false,
+      "passed": 1,
+      "failed": 2,
+      "gen_seconds": 30.9,
+      "rag_chars": 960,
+      "tail": "_rag_v2/t05_password/s1/solution.py:11: AttributeError: module 'base64' has no attribute 'b65encode'. Did you mean: 'b64encode'?\n=========================== short test summary info ============================\nFAILED ::test_roundtrip - AttributeError: module 'base64' has no attribute 'b...\nFAILED ::test_format_and_salt - AttributeError: module 'base64' has no attrib...\n2 failed, 1 passed in 0.70s\n"
+    },
+    {
+      "task": "t05_password",
+      "sample": 2,
+      "ok": false,
+      "passed": 1,
+      "failed": 2,
+      "gen_seconds": 31.1,
+      "rag_chars": 960,
+      "tail": "_rag_v2/t05_password/s2/solution.py:11: AttributeError: module 'base64' has no attribute 'b65encode'. Did you mean: 'b64encode'?\n=========================== short test summary info ============================\nFAILED ::test_roundtrip - AttributeError: module 'base64' has no attribute 'b...\nFAILED ::test_format_and_salt - AttributeError: module 'base64' has no attrib...\n2 failed, 1 passed in 0.80s\n"
+    },
+    {
+      "task": "t05_password",
+      "sample": 3,
+      "ok": false,
+      "passed": 1,
+      "failed": 2,
+      "gen_seconds": 27.9,
+      "rag_chars": 960,
+      "tail": "_rag_v2/t05_password/s3/solution.py:11: AttributeError: module 'base64' has no attribute 'b65encode'. Did you mean: 'b64encode'?\n=========================== short test summary info ============================\nFAILED ::test_roundtrip - AttributeError: module 'base64' has no attribute 'b...\nFAILED ::test_format_and_salt - AttributeError: module 'base64' has no attrib...\n2 failed, 1 passed in 1.09s\n"
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 23.4,
+      "rag_chars": 1051,
+      "tail": ""
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 15.3,
+      "rag_chars": 1051,
+      "tail": ""
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 16.9,
+      "rag_chars": 1051,
+      "tail": ""
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 16.7,
+      "rag_chars": 1051,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 47.7,
+      "rag_chars": 1035,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 58.3,
+      "rag_chars": 1035,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 90.4,
+      "rag_chars": 1035,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 86.6,
+      "rag_chars": 1035,
+      "tail": ""
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 30.7,
+      "rag_chars": 1309,
+      "tail": "on import Base, User, Project, Task, make_session\nsolution.py:3: in <module>\n    from typing import Mapped, List, Optional\nE   ImportError: cannot import name 'Mapped' from 'typing' (/usr/lib/python3.12/typing.py)\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 2.41s\n"
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 1,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 35.2,
+      "rag_chars": 1309,
+      "tail": "on import Base, User, Project, Task, make_session\nsolution.py:3: in <module>\n    from typing import Mapped, List, Optional\nE   ImportError: cannot import name 'Mapped' from 'typing' (/usr/lib/python3.12/typing.py)\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 4.09s\n"
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 35.1,
+      "rag_chars": 1309,
+      "tail": "================================\n________________________ ERROR collecting test session _________________________\nE   NameError: name 'mapped_column' is not defined\n=========================== short test summary info ============================\nERROR  - NameError: name 'mapped_column' is not defined\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 2.92s\n"
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 20.4,
+      "rag_chars": 1309,
+      "tail": "================================\n________________________ ERROR collecting test session _________________________\nE   NameError: name 'mapped_column' is not defined\n=========================== short test summary info ============================\nERROR  - NameError: name 'mapped_column' is not defined\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 2.20s\n"
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 17.9,
+      "rag_chars": 1165,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 22.9,
+      "rag_chars": 1165,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 39.1,
+      "rag_chars": 1165,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 48.1,
+      "rag_chars": 1165,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 0,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 17.8,
+      "rag_chars": 1017,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 1,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 19.4,
+      "rag_chars": 1017,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 2,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 18.2,
+      "rag_chars": 1017,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 3,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 18.5,
+      "rag_chars": 1017,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 25.7,
+      "rag_chars": 703,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 25.5,
+      "rag_chars": 703,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 48.6,
+      "rag_chars": 703,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 50.3,
+      "rag_chars": 703,
+      "tail": ""
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 2,
+      "gen_seconds": 19.7,
+      "rag_chars": 806,
+      "tail": "ibute 'allow'\n/root/lab/runs/suite/c2_rag_v2/tests/test_t12_token_bucket.py:19: AttributeError: 'function' object has no attribute 'allow'\n=========================== short test summary info ============================\nFAILED ::test_burst_and_refill - AttributeError: 'function' object has no att...\nFAILED ::test_cost_does_not_consume_on_fail - AttributeError: 'function' obje...\n2 failed in 0.02s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 1,
+      "ok": false,
+      "passed": 0,
+      "failed": 2,
+      "gen_seconds": 19.8,
+      "rag_chars": 806,
+      "tail": "ibute 'allow'\n/root/lab/runs/suite/c2_rag_v2/tests/test_t12_token_bucket.py:19: AttributeError: 'function' object has no attribute 'allow'\n=========================== short test summary info ============================\nFAILED ::test_burst_and_refill - AttributeError: 'function' object has no att...\nFAILED ::test_cost_does_not_consume_on_fail - AttributeError: 'function' obje...\n2 failed in 0.10s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 2,
+      "gen_seconds": 19.4,
+      "rag_chars": 806,
+      "tail": "ibute 'allow'\n/root/lab/runs/suite/c2_rag_v2/tests/test_t12_token_bucket.py:19: AttributeError: 'function' object has no attribute 'allow'\n=========================== short test summary info ============================\nFAILED ::test_burst_and_refill - AttributeError: 'function' object has no att...\nFAILED ::test_cost_does_not_consume_on_fail - AttributeError: 'function' obje...\n2 failed in 0.09s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 2,
+      "gen_seconds": 14.1,
+      "rag_chars": 806,
+      "tail": "ibute 'allow'\n/root/lab/runs/suite/c2_rag_v2/tests/test_t12_token_bucket.py:19: AttributeError: 'function' object has no attribute 'allow'\n=========================== short test summary info ============================\nFAILED ::test_burst_and_refill - AttributeError: 'function' object has no att...\nFAILED ::test_cost_does_not_consume_on_fail - AttributeError: 'function' obje...\n2 failed in 0.10s\n"
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 22.9,
+      "rag_chars": 703,
+      "tail": ""
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 25.6,
+      "rag_chars": 703,
+      "tail": "be list, not collections.deque\n/root/lab/runs/suite/c2_rag_v2/t13_toposort/s1/solution.py:25: TypeError: heappop() argument must be list, not collections.deque\n=========================== short test summary info ============================\nFAILED ::test_basic - ValueError: Ciclo detectado\nFAILED ::test_implicit_nodes_and_ties - TypeError: heappop() argument must be...\n2 failed, 2 passed in 0.10s\n"
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 24.2,
+      "rag_chars": 703,
+      "tail": ""
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 21.3,
+      "rag_chars": 703,
+      "tail": "/root/lab/runs/suite/c2_rag_v2/t13_toposort/s3/solution.py:23: TypeError: heappop() argument must be list, not collections.deque\n=========================== short test summary info ============================\nFAILED ::test_basic - TypeError: heappop() argument must be list, not collect...\nFAILED ::test_implicit_nodes_and_ties - TypeError: heappop() argument must be...\n2 failed, 2 passed in 0.09s\n"
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 34.5,
+      "rag_chars": 1245,
+      "tail": ""
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 37.5,
+      "rag_chars": 1245,
+      "tail": ""
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 17.5,
+      "rag_chars": 1245,
+      "tail": ""
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 48.1,
+      "rag_chars": 1245,
+      "tail": ""
+    }
+  ]
+}

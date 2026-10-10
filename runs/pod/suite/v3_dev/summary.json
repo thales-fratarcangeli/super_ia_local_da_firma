@@ -1,0 +1,569 @@
+{
+  "name": "v3_dev",
+  "model": "elias-v3",
+  "tasks_ok": 30,
+  "total": 56,
+  "pass_rate": 0.536,
+  "results": [
+    {
+      "task": "t01_slugify",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 5.7,
+      "rag_chars": 0,
+      "tail": "baz' == 'foo-bar-baz'\n      \n      - foo-bar-baz\n      + foo----bar--baz\n      ?    +++     +\n/root/lab/runs/suite/v3_dev/tests/test_t01_slugify.py:10: AssertionError: assert 'foo----bar--baz' == 'foo-bar-baz'\n=========================== short test summary info ============================\nFAILED ::test_symbols_and_edges - AssertionError: assert 'foo----bar--baz' ==...\n1 failed, 3 passed in 0.08s\n"
+    },
+    {
+      "task": "t01_slugify",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 2.1,
+      "rag_chars": 0,
+      "tail": "baz' == 'foo-bar-baz'\n      \n      - foo-bar-baz\n      + foo----bar--baz\n      ?    +++     +\n/root/lab/runs/suite/v3_dev/tests/test_t01_slugify.py:10: AssertionError: assert 'foo----bar--baz' == 'foo-bar-baz'\n=========================== short test summary info ============================\nFAILED ::test_symbols_and_edges - AssertionError: assert 'foo----bar--baz' ==...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t01_slugify",
+      "sample": 2,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 1.9,
+      "rag_chars": 0,
+      "tail": "baz' == 'foo-bar-baz'\n      \n      - foo-bar-baz\n      + foo----bar--baz\n      ?    +++     +\n/root/lab/runs/suite/v3_dev/tests/test_t01_slugify.py:10: AssertionError: assert 'foo----bar--baz' == 'foo-bar-baz'\n=========================== short test summary info ============================\nFAILED ::test_symbols_and_edges - AssertionError: assert 'foo----bar--baz' ==...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t01_slugify",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 1.5,
+      "rag_chars": 0,
+      "tail": "== ''\n=========================== short test summary info ============================\nFAILED ::test_basic - AssertionError: assert 'Hello-World' == 'hello-world'\nFAILED ::test_accents - AssertionError: assert 'Acao-e-Coracao' == 'acao-e-co...\nFAILED ::test_symbols_and_edges - AssertionError: assert 'Foo!!-Bar__baz' == ...\nFAILED ::test_empty - AssertionError: assert '!!!' == ''\n4 failed in 0.01s\n"
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 0,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 3.8,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 1,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 3.3,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 2,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 3.4,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 3,
+      "ok": false,
+      "passed": 6,
+      "failed": 1,
+      "gen_seconds": 3.6,
+      "rag_chars": 0,
+      "tail": "   {'total': 10} != {'total': 25}\n      Use -v to get more diff\n/root/lab/runs/suite/v3_dev/tests/test_t02_paginate.py:6: AssertionError: assert {'items': [0,...age_size': 10} == {'items': [0,...age_size': 10}\n=========================== short test summary info ============================\nFAILED ::test_first_page - AssertionError: assert {'items': [0,...age_size': ...\n1 failed, 6 passed in 0.01s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 3.4,
+      "rag_chars": 0,
+      "tail": "']} != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/v3_dev/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a+b',...d', '%C3%A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a+b',......\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 7.0,
+      "rag_chars": 0,
+      "tail": "'Ã§']} != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/v3_dev/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a b', 'c d', 'Ã§']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a b', 'c...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 2,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 2.5,
+      "rag_chars": 0,
+      "tail": "']} != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/v3_dev/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a+b',...d', '%C3%A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a+b',......\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 3,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 5.4,
+      "rag_chars": 0,
+      "tail": "']} != {'t': ['a b', 'c d', 'ç']}\n      Use -v to get more diff\n/root/lab/runs/suite/v3_dev/tests/test_t03_querystring.py:11: AssertionError: assert {'t': ['a b', 'c20d', 'C3A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ============================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a b', 'c...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t04_lru",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 3.9,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 3.9,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 4.2,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t04_lru",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 4.3,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.6,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.2,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.3,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.4,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 3.9,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 4.0,
+      "rag_chars": 0,
+      "tail": "...F                                                                     [100%]\n=================================== FAILURES ===================================\nE   KeyError: 'sub'\n/root/lab/runs/suite/v3_dev/t06_jwt/s1/solution.py:14: KeyError: 'sub'\n=========================== short test summary info ============================\nFAILED ::test_no_sub - KeyError: 'sub'\n1 failed, 3 passed in 0.03s\n"
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 4.1,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 4.0,
+      "rag_chars": 0,
+      "tail": "tionError: assert 0 is None\n=========================== short test summary info ============================\nFAILED ::test_roundtrip - NameError: name 'timedelta' is not defined\nFAILED ::test_wrong_secret_and_garbage - NameError: name 'timedelta' is not d...\nFAILED ::test_expired - NameError: name 'timedelta' is not defined\nFAILED ::test_no_sub - AssertionError: assert 0 is None\n4 failed in 0.04s\n"
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 11.0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 11.0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 11.4,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 11.1,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 1,
+      "gen_seconds": 6.3,
+      "rag_chars": 0,
+      "tail": "================\nE   AttributeError: 'sessionmaker' object has no attribute 'add'\n/root/lab/runs/suite/v3_dev/tests/test_t08_sqlalchemy_models.py:9: AttributeError: 'sessionmaker' object has no attribute 'add'\n=========================== short test summary info ============================\nFAILED ::test_relationships_and_cascade - AttributeError: 'sessionmaker' obje...\n1 failed, 1 passed in 0.25s\n"
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 1,
+      "ok": false,
+      "passed": 0,
+      "failed": 2,
+      "gen_seconds": 6.6,
+      "rag_chars": 0,
+      "tail": "tadata'\n/root/lab/runs/suite/v3_dev/tests/test_t08_sqlalchemy_models.py:20: AttributeError: type object 'Base' has no attribute 'metadata'\n=========================== short test summary info ============================\nFAILED ::test_relationships_and_cascade - AttributeError: type object 'Base' ...\nFAILED ::test_tables - AttributeError: type object 'Base' has no attribute 'm...\n2 failed in 0.23s\n"
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 2,
+      "ok": false,
+      "passed": 1,
+      "failed": 1,
+      "gen_seconds": 8.0,
+      "rag_chars": 0,
+      "tail": "================\nE   AttributeError: 'sessionmaker' object has no attribute 'add'\n/root/lab/runs/suite/v3_dev/tests/test_t08_sqlalchemy_models.py:9: AttributeError: 'sessionmaker' object has no attribute 'add'\n=========================== short test summary info ============================\nFAILED ::test_relationships_and_cascade - AttributeError: 'sessionmaker' obje...\n1 failed, 1 passed in 0.26s\n"
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 3,
+      "ok": false,
+      "passed": 1,
+      "failed": 1,
+      "gen_seconds": 6.8,
+      "rag_chars": 0,
+      "tail": "hemy.orm.query.Query object at 0x7fca9ac01280> = query(Task)\n     +        where query = <sqlalchemy.orm.session.Session object at 0x7fca9aabb080>.query\n/root/lab/runs/suite/v3_dev/tests/test_t08_sqlalchemy_models.py:16: assert 2 == 0\n=========================== short test summary info ============================\nFAILED ::test_relationships_and_cascade - assert 2 == 0\n1 failed, 1 passed in 0.27s\n"
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 3.4,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 1,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 3.3,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 2,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 3.1,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 3,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 3.4,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 0,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 5.3,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 1,
+      "ok": false,
+      "passed": 6,
+      "failed": 2,
+      "gen_seconds": 5.2,
+      "rag_chars": 0,
+      "tail": "ns/suite/v3_dev/t10_fastapi_pagination/s1/solution.py:7: TypeError: '>=' not supported between instances of 'int' and 'NoneType'\n=========================== short test summary info ============================\nFAILED ::test_default - TypeError: '>=' not supported between instances of 'i...\nFAILED ::test_page_and_size - TypeError: '>=' not supported between instances...\n2 failed, 6 passed in 0.35s\n"
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 2,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 6.7,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 3,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 5.6,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 4.6,
+      "rag_chars": 0,
+      "tail": " (3, 4)] == [(3, 4), (1, 2)]\n      \n      At index 0 diff: (1, 2) != (3, 4)\n      Use -v to get more diff\n/root/lab/runs/suite/v3_dev/tests/test_t11_intervals.py:14: assert [(1, 2), (3, 4)] == [(3, 4), (1, 2)]\n=========================== short test summary info ============================\nFAILED ::test_empty_and_input_untouched - assert [(1, 2), (3, 4)] == [(3, 4),...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 4.8,
+      "rag_chars": 0,
+      "tail": " (3, 4)] == [(3, 4), (1, 2)]\n      \n      At index 0 diff: (1, 2) != (3, 4)\n      Use -v to get more diff\n/root/lab/runs/suite/v3_dev/tests/test_t11_intervals.py:14: assert [(1, 2), (3, 4)] == [(3, 4), (1, 2)]\n=========================== short test summary info ============================\nFAILED ::test_empty_and_input_untouched - assert [(1, 2), (3, 4)] == [(3, 4),...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 2.9,
+      "rag_chars": 0,
+      "tail": ")] == [(3, 4), (1, 2)]\nE   Failed: DID NOT RAISE ValueError\n/root/lab/runs/suite/v3_dev/tests/test_t11_intervals.py:17: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_empty_and_input_untouched - assert [(1, 2), (3, 4)] == [(3, 4),...\nFAILED ::test_invalid - Failed: DID NOT RAISE ValueError\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 2.7,
+      "rag_chars": 0,
+      "tail": ")] == [(3, 4), (1, 2)]\nE   Failed: DID NOT RAISE ValueError\n/root/lab/runs/suite/v3_dev/tests/test_t11_intervals.py:17: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_empty_and_input_untouched - assert [(1, 2), (3, 4)] == [(3, 4),...\nFAILED ::test_invalid - Failed: DID NOT RAISE ValueError\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 0,
+      "ok": true,
+      "passed": 2,
+      "failed": 0,
+      "gen_seconds": 3.8,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 1,
+      "ok": true,
+      "passed": 2,
+      "failed": 0,
+      "gen_seconds": 4.0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 2,
+      "ok": false,
+      "passed": 1,
+      "failed": 1,
+      "gen_seconds": 2.6,
+      "rag_chars": 0,
+      "tail": "=============\nE   assert (False is True)\n     +  where False = allow()\n     +    where allow = <solution.RateLimiter object at 0x72c01ba068a0>.allow\n/root/lab/runs/suite/v3_dev/tests/test_t12_token_bucket.py:12: assert (False is True)\n=========================== short test summary info ============================\nFAILED ::test_burst_and_refill - assert (False is True)\n1 failed, 1 passed in 0.01s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 3,
+      "ok": true,
+      "passed": 2,
+      "failed": 0,
+      "gen_seconds": 3.9,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 0,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 4.4,
+      "rag_chars": 0,
+      "tail": "alueError: Cycle detected in dependencies\n/root/lab/runs/suite/v3_dev/t13_toposort/s0/solution.py:25: ValueError: Cycle detected in dependencies\n=========================== short test summary info ============================\nFAILED ::test_basic - ValueError: Cycle detected in dependencies\nFAILED ::test_implicit_nodes_and_ties - ValueError: Cycle detected in depende...\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 4.3,
+      "rag_chars": 0,
+      "tail": "3_toposort/s1/solution.py:25: ValueError: Cycle detected\nE   ValueError: Cycle detected\n/root/lab/runs/suite/v3_dev/t13_toposort/s1/solution.py:25: ValueError: Cycle detected\n=========================== short test summary info ============================\nFAILED ::test_basic - ValueError: Cycle detected\nFAILED ::test_implicit_nodes_and_ties - ValueError: Cycle detected\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 4.4,
+      "rag_chars": 0,
+      "tail": "osort/s2/solution.py:25: ValueError: Ciclo detectado\nE   ValueError: Ciclo detectado\n/root/lab/runs/suite/v3_dev/t13_toposort/s2/solution.py:25: ValueError: Ciclo detectado\n=========================== short test summary info ============================\nFAILED ::test_basic - ValueError: Ciclo detectado\nFAILED ::test_implicit_nodes_and_ties - ValueError: Ciclo detectado\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 4.7,
+      "rag_chars": 0,
+      "tail": "ust be list, not collections.deque\n/root/lab/runs/suite/v3_dev/t13_toposort/s3/solution.py:20: TypeError: heappop() argument must be list, not collections.deque\n=========================== short test summary info ============================\nFAILED ::test_basic - ValueError: Cycle detected\nFAILED ::test_implicit_nodes_and_ties - TypeError: heappop() argument must be...\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 2,
+      "gen_seconds": 6.4,
+      "rag_chars": 0,
+      "tail": "3_dev/t14_pydantic/s0/solution.py:21: TypeError: ValidationError.__new__() missing 1 required positional argument: 'line_errors'\n=========================== short test summary info ============================\nFAILED ::test_username_rules - TypeError: ValidationError.__new__() missing 1...\nFAILED ::test_password_age_role - TypeError: ValidationError.__new__() missin...\n2 failed, 1 passed in 0.09s\n"
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.4,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.3,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 6.3,
+      "rag_chars": 0,
+      "tail": ""
+    }
+  ]
+}

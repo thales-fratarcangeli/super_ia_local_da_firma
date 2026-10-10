@@ -1,0 +1,409 @@
+{
+  "name": "v2_held",
+  "model": "elias-v2",
+  "tasks_ok": 5,
+  "total": 40,
+  "pass_rate": 0.125,
+  "results": [
+    {
+      "task": "h01_roman",
+      "sample": 0,
+      "ok": false,
+      "passed": 8,
+      "failed": 3,
+      "gen_seconds": 8.9,
+      "rag_chars": 0,
+      "tail": "\n/root/lab/runs/suite/v2_held/tests/test_h01_roman.py:19: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\n3 failed, 8 passed in 0.02s\n"
+    },
+    {
+      "task": "h01_roman",
+      "sample": 1,
+      "ok": false,
+      "passed": 8,
+      "failed": 3,
+      "gen_seconds": 9.2,
+      "rag_chars": 0,
+      "tail": "\n/root/lab/runs/suite/v2_held/tests/test_h01_roman.py:19: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\n3 failed, 8 passed in 0.02s\n"
+    },
+    {
+      "task": "h01_roman",
+      "sample": 2,
+      "ok": false,
+      "passed": 8,
+      "failed": 3,
+      "gen_seconds": 10.8,
+      "rag_chars": 0,
+      "tail": "\n/root/lab/runs/suite/v2_held/tests/test_h01_roman.py:19: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\n3 failed, 8 passed in 0.03s\n"
+    },
+    {
+      "task": "h01_roman",
+      "sample": 3,
+      "ok": false,
+      "passed": 8,
+      "failed": 3,
+      "gen_seconds": 9.0,
+      "rag_chars": 0,
+      "tail": "\n/root/lab/runs/suite/v2_held/tests/test_h01_roman.py:19: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\n3 failed, 8 passed in 0.02s\n"
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 0,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 2.6,
+      "rag_chars": 0,
+      "tail": "======= FAILURES ===================================\nE   AssertionError: assert 1 == 0\n     +  where 1 = check_brackets('((')\n/root/lab/runs/suite/v2_held/tests/test_h02_brackets.py:13: AssertionError: assert 1 == 0\n=========================== short test summary info ============================\nFAILED ::test_unclosed_reports_oldest_open - AssertionError: assert 1 == 0\n1 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 2.5,
+      "rag_chars": 0,
+      "tail": "======= FAILURES ===================================\nE   AssertionError: assert 1 == 0\n     +  where 1 = check_brackets('((')\n/root/lab/runs/suite/v2_held/tests/test_h02_brackets.py:13: AssertionError: assert 1 == 0\n=========================== short test summary info ============================\nFAILED ::test_unclosed_reports_oldest_open - AssertionError: assert 1 == 0\n1 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 2.7,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 2.5,
+      "rag_chars": 0,
+      "tail": "======= FAILURES ===================================\nE   AssertionError: assert 1 == 0\n     +  where 1 = check_brackets('((')\n/root/lab/runs/suite/v2_held/tests/test_h02_brackets.py:13: AssertionError: assert 1 == 0\n=========================== short test summary info ============================\nFAILED ::test_unclosed_reports_oldest_open - AssertionError: assert 1 == 0\n1 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 4.7,
+      "rag_chars": 0,
+      "tail": "onError: assert ['', 'a', ',', 'b', ','] == [' a ', ' b ', '']\n=========================== short test summary info ============================\nFAILED ::test_simple - AssertionError: assert ['a,b,c'] == ['a', 'b', 'c']\nFAILED ::test_quotes - AssertionError: assert ['a,b,c'] == ['a,b', 'c']\nFAILED ::test_spaces_and_trailing - AssertionError: assert ['', 'a', ',', 'b'...\n3 failed, 1 passed in 0.02s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 5.2,
+      "rag_chars": 0,
+      "tail": "  Use -v to get more diff\n/root/lab/runs/suite/v2_held/tests/test_h03_csv_line.py:15: AssertionError: assert [' a ', ' b '] == [' a ', ' b ', '']\n=========================== short test summary info ============================\nFAILED ::test_quotes - assert ['\"a,b', '', 'c'] == ['a,b', 'c']\nFAILED ::test_spaces_and_trailing - AssertionError: assert [' a ', ' b '] == ...\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 2,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 4.0,
+      "rag_chars": 0,
+      "tail": "============\nE   assert ['\"a,b\"', 'c'] == ['a,b', 'c']\n      \n      At index 0 diff: '\"a,b\"' != 'a,b'\n      Use -v to get more diff\n/root/lab/runs/suite/v2_held/tests/test_h03_csv_line.py:10: assert ['\"a,b\"', 'c'] == ['a,b', 'c']\n=========================== short test summary info ============================\nFAILED ::test_quotes - assert ['\"a,b\"', 'c'] == ['a,b', 'c']\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 5.2,
+      "rag_chars": 0,
+      "tail": "  Use -v to get more diff\n/root/lab/runs/suite/v2_held/tests/test_h03_csv_line.py:15: AssertionError: assert [' a ', ' b '] == [' a ', ' b ', '']\n=========================== short test summary info ============================\nFAILED ::test_quotes - assert ['\"a,b', '', 'c'] == ['a,b', 'c']\nFAILED ::test_spaces_and_trailing - AssertionError: assert [' a ', ' b '] == ...\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 7.3,
+      "rag_chars": 0,
+      "tail": "d/tests/test_h04_kv_ttl.py:31: AssertionError: assert None == 2\n=========================== short test summary info ============================\nFAILED ::test_expiry_boundary - AssertionError: assert None == 1\nFAILED ::test_len_counts_only_alive_and_delete - NameError: name 'key' is not...\nFAILED ::test_overwrite_resets_ttl_and_invalid - AssertionError: assert None ...\n3 failed, 1 passed in 0.02s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 5.6,
+      "rag_chars": 0,
+      "tail": "e)\n     +  where True = delete('a')\n     +    where delete = <solution.TTLStore object at 0x710487062b70>.delete\n/root/lab/runs/suite/v2_held/tests/test_h04_kv_ttl.py:26: AssertionError: assert (True is False)\n=========================== short test summary info ============================\nFAILED ::test_len_counts_only_alive_and_delete - AssertionError: assert (True...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 5.3,
+      "rag_chars": 0,
+      "tail": "re delete = <solution.TTLStore object at 0x75d8625470b0>.delete\n/root/lab/runs/suite/v2_held/tests/test_h04_kv_ttl.py:26: AssertionError: assert (True is False)\n=========================== short test summary info ============================\nFAILED ::test_basic_and_default - KeyError: 'zz'\nFAILED ::test_len_counts_only_alive_and_delete - AssertionError: assert (True...\n2 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 3,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 5.9,
+      "rag_chars": 0,
+      "tail": "e)\n     +  where True = delete('a')\n     +    where delete = <solution.TTLStore object at 0x77f02cc9a990>.delete\n/root/lab/runs/suite/v2_held/tests/test_h04_kv_ttl.py:26: AssertionError: assert (True is False)\n=========================== short test summary info ============================\nFAILED ::test_len_counts_only_alive_and_delete - AssertionError: assert (True...\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 5,
+      "gen_seconds": 10.6,
+      "rag_chars": 0,
+      "tail": "===\nFAILED ::test_create_and_get - ValueError: \"Note\" object has no field \"id\"\nFAILED ::test_default_body_and_ids_increase - ValueError: \"Note\" object has n...\nFAILED ::test_validation - ValueError: \"Note\" object has no field \"id\"\nFAILED ::test_put_delete_404 - ValueError: \"Note\" object has no field \"id\"\nFAILED ::test_list_and_search - ValueError: \"Note\" object has no field \"id\"\n5 failed in 0.38s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 3,
+      "gen_seconds": 10.1,
+      "rag_chars": 0,
+      "tail": ".12/dist-packages/fastapi/encoders.py:316: TypeError: unhashable type: 'list'\n=========================== short test summary info ============================\nFAILED ::test_create_and_get - AssertionError: assert {'title': 'Co...ody': '...\nFAILED ::test_put_delete_404 - AssertionError: assert 200 == 204\nFAILED ::test_list_and_search - TypeError: unhashable type: 'list'\n3 failed, 2 passed in 0.37s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 2,
+      "ok": false,
+      "passed": 4,
+      "failed": 1,
+      "gen_seconds": 10.6,
+      "rag_chars": 0,
+      "tail": "se [200 OK]> = delete('/notes/5')\n     +      where delete = <starlette.testclient.TestClient object at 0x758ee0a156a0>.delete\n/root/lab/runs/suite/v2_held/tests/test_h05_fastapi_notes.py:27: AssertionError: assert 200 == 204\n=========================== short test summary info ============================\nFAILED ::test_put_delete_404 - AssertionError: assert 200 == 204\n1 failed, 4 passed in 0.37s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 3,
+      "ok": false,
+      "passed": 3,
+      "failed": 2,
+      "gen_seconds": 11.1,
+      "rag_chars": 0,
+      "tail": "'title': 'Co...ody': 'leite'} == {'id': 1, 'ti...ody': 'leite'}\nE   KeyError: 'id'\n/root/lab/runs/suite/v2_held/tests/test_h05_fastapi_notes.py:34: KeyError: 'id'\n=========================== short test summary info ============================\nFAILED ::test_create_and_get - AssertionError: assert {'title': 'Co...ody': '...\nFAILED ::test_list_and_search - KeyError: 'id'\n2 failed, 3 passed in 0.37s\n"
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 3.1,
+      "rag_chars": 0,
+      "tail": "ssing 1 required positional argument: 'line_errors'\n/root/lab/runs/suite/v2_held/h06_pydantic_range/s0/solution.py:13: TypeError: ValidationError.__new__() missing 1 required positional argument: 'line_errors'\n=========================== short test summary info ============================\nFAILED ::test_end_must_be_after_start - TypeError: ValidationError.__new__() ...\n1 failed, 3 passed in 0.09s\n"
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 1,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 3.4,
+      "rag_chars": 0,
+      "tail": "ssing 1 required positional argument: 'line_errors'\n/root/lab/runs/suite/v2_held/h06_pydantic_range/s1/solution.py:13: TypeError: ValidationError.__new__() missing 1 required positional argument: 'line_errors'\n=========================== short test summary info ============================\nFAILED ::test_end_must_be_after_start - TypeError: ValidationError.__new__() ...\n1 failed, 3 passed in 0.09s\n"
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 3.2,
+      "rag_chars": 0,
+      "tail": "ailed: DID NOT RAISE ValidationError\n/root/lab/runs/suite/v2_held/tests/test_h06_pydantic_range.py:19: Failed: DID NOT RAISE ValidationError\n=========================== short test summary info ============================\nFAILED ::test_end_must_be_after_start - TypeError: ValidationError.__new__() ...\nFAILED ::test_guest_required - Failed: DID NOT RAISE ValidationError\n2 failed, 2 passed in 0.09s\n"
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 3,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 3.4,
+      "rag_chars": 0,
+      "tail": "============================== FAILURES ===================================\nE   Failed: DID NOT RAISE ValidationError\n/root/lab/runs/suite/v2_held/tests/test_h06_pydantic_range.py:19: Failed: DID NOT RAISE ValidationError\n=========================== short test summary info ============================\nFAILED ::test_guest_required - Failed: DID NOT RAISE ValidationError\n1 failed, 3 passed in 0.09s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 7.4,
+      "rag_chars": 0,
+      "tail": "==== ERRORS ====================================\n________________________ ERROR collecting test session _________________________\nE   NameError: name 'Table' is not defined\n=========================== short test summary info ============================\nERROR  - NameError: name 'Table' is not defined\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.33s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 7.2,
+      "rag_chars": 0,
+      "tail": "st-packages/sqlalchemy/engine/default.py:1192: sqlalchemy.exc.IntegrityError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n=========================== short test summary info ============================\nFAILED ::test_reuse_and_no_duplicate_association - sqlalchemy.exc.IntegrityEr...\n1 failed, 2 passed in 0.26s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 7.5,
+      "rag_chars": 0,
+      "tail": "st-packages/sqlalchemy/engine/default.py:1192: sqlalchemy.exc.IntegrityError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n=========================== short test summary info ============================\nFAILED ::test_reuse_and_no_duplicate_association - sqlalchemy.exc.IntegrityEr...\n1 failed, 2 passed in 0.28s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 7.5,
+      "rag_chars": 0,
+      "tail": "st-packages/sqlalchemy/engine/default.py:1192: sqlalchemy.exc.IntegrityError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)\n=========================== short test summary info ============================\nFAILED ::test_reuse_and_no_duplicate_association - sqlalchemy.exc.IntegrityEr...\n1 failed, 2 passed in 0.28s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 0,
+      "ok": false,
+      "passed": 7,
+      "failed": 5,
+      "gen_seconds": 9.0,
+      "rag_chars": 0,
+      "tail": "at\n=========================== short test summary info ============================\nFAILED ::test_parse_ok - ValueError: Invalid duration format\nFAILED ::test_parse_invalid[-5s] - KeyError: '-'\nFAILED ::test_parse_invalid[1.5h] - KeyError: '.'\nFAILED ::test_parse_invalid[h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_roundtrip - ValueError: Invalid duration format\n5 failed, 7 passed in 0.02s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 1,
+      "ok": false,
+      "passed": 10,
+      "failed": 2,
+      "gen_seconds": 12.3,
+      "rag_chars": 0,
+      "tail": "_duration/s1/solution.py:37: ValueError: Invalid duration\nE   ValueError: Invalid duration\n/root/lab/runs/suite/v2_held/h08_duration/s1/solution.py:37: ValueError: Invalid duration\n=========================== short test summary info ============================\nFAILED ::test_parse_ok - ValueError: Invalid duration\nFAILED ::test_roundtrip - ValueError: Invalid duration\n2 failed, 10 passed in 0.02s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 62.6,
+      "rag_chars": 0,
+      "tail": "ule>\n    from solution import parse_duration, format_duration\nE     File \"/root/lab/runs/suite/v2_held/h08_duration/s2/solution.py\", line 88\nE       if text.find\nE                   ^\nE   SyntaxError: expected ':'\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.15s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 3,
+      "ok": false,
+      "passed": 9,
+      "failed": 3,
+      "gen_seconds": 8.2,
+      "rag_chars": 0,
+      "tail": "0: ValueError: invalid literal for int() with base 10: '59s'\n=========================== short test summary info ============================\nFAILED ::test_parse_ok - ValueError: invalid literal for int() with base 10: ...\nFAILED ::test_parse_invalid[-5s] - Failed: DID NOT RAISE ValueError\nFAILED ::test_roundtrip - ValueError: invalid literal for int() with base 10:...\n3 failed, 9 passed in 0.02s\n"
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 8.6,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 9.1,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 9.6,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 9.1,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 0,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 8.2,
+      "rag_chars": 0,
+      "tail": ".DecodeError: Not enough segments\n/usr/lib/python3/dist-packages/jwt/api_jws.py:260: jwt.exceptions.DecodeError: Not enough segments\n=========================== short test summary info ============================\nFAILED ::test_verify_access_only - jwt.exceptions.DecodeError: Not enough seg...\nFAILED ::test_refresh_flow - jwt.exceptions.DecodeError: Not enough segments\n2 failed, 2 passed in 0.05s\n"
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 8.0,
+      "rag_chars": 0,
+      "tail": ".DecodeError: Not enough segments\n/usr/lib/python3/dist-packages/jwt/api_jws.py:260: jwt.exceptions.DecodeError: Not enough segments\n=========================== short test summary info ============================\nFAILED ::test_verify_access_only - jwt.exceptions.DecodeError: Not enough seg...\nFAILED ::test_refresh_flow - jwt.exceptions.DecodeError: Not enough segments\n2 failed, 2 passed in 0.04s\n"
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 2,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 8.4,
+      "rag_chars": 0,
+      "tail": ".DecodeError: Not enough segments\n/usr/lib/python3/dist-packages/jwt/api_jws.py:260: jwt.exceptions.DecodeError: Not enough segments\n=========================== short test summary info ============================\nFAILED ::test_verify_access_only - jwt.exceptions.DecodeError: Not enough seg...\nFAILED ::test_refresh_flow - jwt.exceptions.DecodeError: Not enough segments\n2 failed, 2 passed in 0.04s\n"
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 8.3,
+      "rag_chars": 0,
+      "tail": ".DecodeError: Not enough segments\n/usr/lib/python3/dist-packages/jwt/api_jws.py:260: jwt.exceptions.DecodeError: Not enough segments\n=========================== short test summary info ============================\nFAILED ::test_verify_access_only - jwt.exceptions.DecodeError: Not enough seg...\nFAILED ::test_refresh_flow - jwt.exceptions.DecodeError: Not enough segments\n2 failed, 2 passed in 0.04s\n"
+    }
+  ]
+}

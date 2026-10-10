@@ -1,0 +1,262 @@
+{
+  "name": "pref",
+  "model": "qwen3:8b",
+  "rag": false,
+  "pass_rate": 1.0,
+  "total": 24,
+  "por_linguagem": {
+    "python": 1.0,
+    "js": 1.0,
+    "c": 1.0,
+    "go": 1.0,
+    "java": 1.0,
+    "sql": 1.0
+  },
+  "por_nivel": {
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0
+  },
+  "results": [
+    {
+      "id": "py1_two_sum",
+      "lang": "python",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "js1_case",
+      "lang": "js",
+      "area": "strings",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "c1_bits",
+      "lang": "c",
+      "area": "sistemas / bits",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "go1_fib",
+      "lang": "go",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "java1_strings",
+      "lang": "java",
+      "area": "strings",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "sql1_avg",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "py2_cidr",
+      "lang": "python",
+      "area": "redes",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "js2_route",
+      "lang": "js",
+      "area": "web",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "js3_retry",
+      "lang": "js",
+      "area": "assíncrono",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "c2_strings",
+      "lang": "c",
+      "area": "strings / memória",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "c3_stack",
+      "lang": "c",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "go2_wordfreq",
+      "lang": "go",
+      "area": "texto",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "go3_sumpar",
+      "lang": "go",
+      "area": "concorrência",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "java2_topk",
+      "lang": "java",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "java3_account",
+      "lang": "java",
+      "area": "orientação a objetos",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "sql2_noorders",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "sql3_topper",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "py3_parallel",
+      "lang": "python",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "py4_calc",
+      "lang": "python",
+      "area": "compiladores",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "js4_emitter",
+      "lang": "js",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "c4_parse_int",
+      "lang": "c",
+      "area": "parsing / overflow",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "go4_lru",
+      "lang": "go",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "java4_counter",
+      "lang": "java",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    },
+    {
+      "id": "sql4_running",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 0,
+      "tail": ""
+    }
+  ]
+}

@@ -13,7 +13,7 @@ import requests
 HERE = Path(__file__).parent
 KB = HERE / "kb"
 INDEX = HERE / "index.json"
-OLLAMA = "http://localhost:11434"
+OLLAMA = "http://127.0.0.1:11434"
 EMBED_MODEL = "nomic-embed-text"
 
 

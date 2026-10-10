@@ -1,0 +1,409 @@
+{
+  "name": "v3r_held",
+  "model": "elias-v3",
+  "tasks_ok": 8,
+  "total": 40,
+  "pass_rate": 0.2,
+  "results": [
+    {
+      "task": "h01_roman",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 5.5,
+      "rag_chars": 895,
+      "tail": ": in <module>\n    from solution import to_roman, from_roman\nE     File \"/root/lab/runs/suite/v3r_held/h01_roman/s0/solution.py\", line 36\nE       class RomanNum\nE                     ^\nE   SyntaxError: expected ':'\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.15s\n"
+    },
+    {
+      "task": "h01_roman",
+      "sample": 1,
+      "ok": false,
+      "passed": 8,
+      "failed": 3,
+      "gen_seconds": 9.8,
+      "rag_chars": 895,
+      "tail": "/root/lab/runs/suite/v3r_held/tests/test_h01_roman.py:19: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\n3 failed, 8 passed in 0.02s\n"
+    },
+    {
+      "task": "h01_roman",
+      "sample": 2,
+      "ok": false,
+      "passed": 10,
+      "failed": 1,
+      "gen_seconds": 10.3,
+      "rag_chars": 895,
+      "tail": "      [100%]\n=================================== FAILURES ===================================\nE   Failed: DID NOT RAISE ValueError\n/root/lab/runs/suite/v3r_held/tests/test_h01_roman.py:19: Failed: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\n1 failed, 10 passed in 0.03s\n"
+    },
+    {
+      "task": "h01_roman",
+      "sample": 3,
+      "ok": false,
+      "passed": 6,
+      "failed": 5,
+      "gen_seconds": 9.4,
+      "rag_chars": 895,
+      "tail": "==========\nFAILED ::test_known - TypeError: cannot unpack non-iterable RomanNumeral object\nFAILED ::test_roundtrip - TypeError: cannot unpack non-iterable RomanNumeral ...\nFAILED ::test_from_invalid[IIII] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[VX] - Failed: DID NOT RAISE ValueError\nFAILED ::test_from_invalid[IC] - Failed: DID NOT RAISE ValueError\n5 failed, 6 passed in 0.02s\n"
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 3.8,
+      "rag_chars": 837,
+      "tail": ""
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 3.6,
+      "rag_chars": 837,
+      "tail": ""
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 4.2,
+      "rag_chars": 837,
+      "tail": ""
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 3.5,
+      "rag_chars": 837,
+      "tail": "====== FAILURES ===================================\nE   AssertionError: assert 1 == 0\n     +  where 1 = check_brackets('((')\n/root/lab/runs/suite/v3r_held/tests/test_h02_brackets.py:13: AssertionError: assert 1 == 0\n=========================== short test summary info ============================\nFAILED ::test_unclosed_reports_oldest_open - AssertionError: assert 1 == 0\n1 failed, 2 passed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 4.8,
+      "rag_chars": 1095,
+      "tail": "===========\nE   assert ['\"a,b\"', 'c'] == ['a,b', 'c']\n      \n      At index 0 diff: '\"a,b\"' != 'a,b'\n      Use -v to get more diff\n/root/lab/runs/suite/v3r_held/tests/test_h03_csv_line.py:10: assert ['\"a,b\"', 'c'] == ['a,b', 'c']\n=========================== short test summary info ============================\nFAILED ::test_quotes - assert ['\"a,b\"', 'c'] == ['a,b', 'c']\n1 failed, 3 passed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 1,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 4.3,
+      "rag_chars": 1095,
+      "tail": "or: Aspas não fechadas\n/root/lab/runs/suite/v3r_held/h03_csv_line/s1/solution.py:18: ValueError: Aspas não fechadas\n=========================== short test summary info ============================\nFAILED ::test_simple - ValueError: Aspas não fechadas\nFAILED ::test_quotes - ValueError: Aspas não fechadas\nFAILED ::test_spaces_and_trailing - ValueError: Aspas não fechadas\n3 failed, 1 passed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 4.6,
+      "rag_chars": 1095,
+      "tail": "ID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_simple - AssertionError: assert ['', '', ''] == ['a', 'b', 'c']\nFAILED ::test_quotes - assert ['\"a,b\"', ''] == ['a,b', 'c']\nFAILED ::test_spaces_and_trailing - AssertionError: assert ['', ''] == [' a '...\nFAILED ::test_unclosed - Failed: DID NOT RAISE ValueError\n4 failed in 0.01s\n"
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 5.5,
+      "rag_chars": 1095,
+      "tail": "d: DID NOT RAISE ValueError\n=========================== short test summary info ============================\nFAILED ::test_simple - AssertionError: assert ['a', 'c'] == ['a', '', 'c']\nFAILED ::test_quotes - assert ['\"ab', 'c'] == ['a,b', 'c']\nFAILED ::test_spaces_and_trailing - AssertionError: assert [' a ', ' b '] == ...\nFAILED ::test_unclosed - Failed: DID NOT RAISE ValueError\n4 failed in 0.01s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 8.6,
+      "rag_chars": 1024,
+      "tail": ")\n     +  where True = delete('a')\n     +    where delete = <solution.TTLStore object at 0x71030dfb5a90>.delete\n/root/lab/runs/suite/v3r_held/tests/test_h04_kv_ttl.py:26: AssertionError: assert (True is False)\n=========================== short test summary info ============================\nFAILED ::test_len_counts_only_alive_and_delete - AssertionError: assert (True...\n1 failed, 3 passed in 0.04s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 1,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 8.0,
+      "rag_chars": 1024,
+      "tail": "_kv_ttl.py:31: AssertionError: assert None == 2\n=========================== short test summary info ============================\nFAILED ::test_basic_and_default - TypeError: '>=' not supported between insta...\nFAILED ::test_len_counts_only_alive_and_delete - TypeError: '<' not supported...\nFAILED ::test_overwrite_resets_ttl_and_invalid - AssertionError: assert None ...\n3 failed, 1 passed in 0.04s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 4,
+      "gen_seconds": 6.4,
+      "rag_chars": 1024,
+      "tail": "==== short test summary info ============================\nFAILED ::test_basic_and_default - AttributeError: 'TTLStore' object has no at...\nFAILED ::test_expiry_boundary - AttributeError: 'TTLStore' object has no attr...\nFAILED ::test_len_counts_only_alive_and_delete - TypeError: '<' not supported...\nFAILED ::test_overwrite_resets_ttl_and_invalid - AttributeError: 'TTLStore' o...\n4 failed in 0.04s\n"
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 3,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 8.8,
+      "rag_chars": 1024,
+      "tail": "type(s) for +: 'float' and 'datetime.timedelta'\n=========================== short test summary info ============================\nFAILED ::test_expiry_boundary - TypeError: unsupported operand type(s) for +:...\nFAILED ::test_len_counts_only_alive_and_delete - TypeError: unsupported opera...\nFAILED ::test_overwrite_resets_ttl_and_invalid - TypeError: unsupported opera...\n3 failed, 1 passed in 0.04s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 0,
+      "ok": true,
+      "passed": 5,
+      "failed": 0,
+      "gen_seconds": 15.1,
+      "rag_chars": 1017,
+      "tail": ""
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 1,
+      "ok": false,
+      "passed": 4,
+      "failed": 1,
+      "gen_seconds": 12.5,
+      "rag_chars": 1017,
+      "tail": "d]> = post('/notes', json={'title': ''})\n     +      where post = <starlette.testclient.TestClient object at 0x720193ee8110>.post\n/root/lab/runs/suite/v3r_held/tests/test_h05_fastapi_notes.py:19: AssertionError: assert 201 == 422\n=========================== short test summary info ============================\nFAILED ::test_validation - AssertionError: assert 201 == 422\n1 failed, 4 passed in 0.37s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 2,
+      "ok": false,
+      "passed": 4,
+      "failed": 1,
+      "gen_seconds": 12.6,
+      "rag_chars": 1017,
+      "tail": "e [200 OK]> = delete('/notes/5')\n     +      where delete = <starlette.testclient.TestClient object at 0x7a8b6f4f7fb0>.delete\n/root/lab/runs/suite/v3r_held/tests/test_h05_fastapi_notes.py:27: AssertionError: assert 200 == 204\n=========================== short test summary info ============================\nFAILED ::test_put_delete_404 - AssertionError: assert 200 == 204\n1 failed, 4 passed in 0.37s\n"
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 3,
+      "ok": false,
+      "passed": 4,
+      "failed": 1,
+      "gen_seconds": 13.6,
+      "rag_chars": 1017,
+      "tail": "================= FAILURES ===================================\nE   NameError: name 'Response' is not defined\n/root/lab/runs/suite/v3r_held/h05_fastapi_notes/s3/solution.py:61: NameError: name 'Response' is not defined\n=========================== short test summary info ============================\nFAILED ::test_put_delete_404 - NameError: name 'Response' is not defined\n1 failed, 4 passed in 0.33s\n"
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 5.8,
+      "rag_chars": 1146,
+      "tail": "icCoreError, PydanticValueError\nE   ImportError: cannot import name 'PydanticCoreError' from 'pydantic_core' (/usr/local/lib/python3.12/dist-packages/pydantic_core/__init__.py). Did you mean: 'PydanticKnownError'?\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.16s\n"
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 2,
+      "gen_seconds": 5.6,
+      "rag_chars": 1146,
+      "tail": "t 99 == 1\nE   Failed: DID NOT RAISE ValidationError\n/root/lab/runs/suite/v3r_held/tests/test_h06_pydantic_range.py:19: Failed: DID NOT RAISE ValidationError\n=========================== short test summary info ============================\nFAILED ::test_nights_overridden - AssertionError: assert 99 == 1\nFAILED ::test_guest_required - Failed: DID NOT RAISE ValidationError\n2 failed, 2 passed in 0.10s\n"
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 5.2,
+      "rag_chars": 1146,
+      "tail": "c_core import PydanticCoreError\nE   ImportError: cannot import name 'PydanticCoreError' from 'pydantic_core' (/usr/local/lib/python3.12/dist-packages/pydantic_core/__init__.py). Did you mean: 'PydanticKnownError'?\n=========================== short test summary info ============================\nERROR \n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.15s\n"
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 3,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 6.8,
+      "rag_chars": 1146,
+      "tail": "r cannot be applied to instance methods\n    \n    For further information visit https://errors.pydantic.dev/2.14/u/validator-instance-method\n=========================== short test summary info ============================\nERROR  - pydantic.errors.PydanticUserError: The `@field_validator` decorator ...\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.23s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 2,
+      "gen_seconds": 10.1,
+      "rag_chars": 1309,
+      "tail": "s/sqlalchemy/engine/default.py:1192: sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: tags.name\n=========================== short test summary info ============================\nFAILED ::test_many_to_many_both_sides - sqlalchemy.exc.IntegrityError: (raise...\nFAILED ::test_reuse_and_no_duplicate_association - sqlalchemy.exc.IntegrityEr...\n2 failed, 1 passed in 0.27s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 1,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 9.3,
+      "rag_chars": 1309,
+      "tail": "he.me/e/21/gkpj)\n/usr/local/lib/python3.12/dist-packages/sqlalchemy/engine/default.py:1192: sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: post_tags.post_id, post_tags.tag_id\n=========================== short test summary info ============================\nFAILED ::test_reuse_and_no_duplicate_association - sqlalchemy.exc.IntegrityEr...\n1 failed, 2 passed in 0.22s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 2,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 9.9,
+      "rag_chars": 1309,
+      "tail": "================================\n________________________ ERROR collecting test session _________________________\nE   NameError: name 'mapped_column' is not defined\n=========================== short test summary info ============================\nERROR  - NameError: name 'mapped_column' is not defined\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.33s\n"
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 3,
+      "ok": false,
+      "passed": 2,
+      "failed": 1,
+      "gen_seconds": 9.3,
+      "rag_chars": 1309,
+      "tail": "s error at: https://sqlalche.me/e/21/gkpj)\n/usr/local/lib/python3.12/dist-packages/sqlalchemy/engine/default.py:1192: sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: tags.name\n=========================== short test summary info ============================\nFAILED ::test_reuse_and_no_duplicate_association - sqlalchemy.exc.IntegrityEr...\n1 failed, 2 passed in 0.27s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 0,
+      "ok": false,
+      "passed": 10,
+      "failed": 2,
+      "gen_seconds": 9.2,
+      "rag_chars": 1148,
+      "tail": "rror: Invalid duration format\nE   ValueError: Invalid duration format\n/root/lab/runs/suite/v3r_held/h08_duration/s0/solution.py:7: ValueError: Invalid duration format\n=========================== short test summary info ============================\nFAILED ::test_parse_ok - ValueError: Invalid duration format\nFAILED ::test_roundtrip - ValueError: Invalid duration format\n2 failed, 10 passed in 0.02s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 1,
+      "ok": false,
+      "passed": 9,
+      "failed": 3,
+      "gen_seconds": 10.1,
+      "rag_chars": 1148,
+      "tail": "E   ValueError: invalid format\n/root/lab/runs/suite/v3r_held/h08_duration/s1/solution.py:10: ValueError: invalid format\n=========================== short test summary info ============================\nFAILED ::test_parse_ok - ValueError: invalid format\nFAILED ::test_parse_invalid[h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_roundtrip - ValueError: invalid format\n3 failed, 9 passed in 0.04s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 2,
+      "ok": false,
+      "passed": 8,
+      "failed": 4,
+      "gen_seconds": 11.0,
+      "rag_chars": 1148,
+      "tail": "Error: invalid format\n=========================== short test summary info ============================\nFAILED ::test_parse_ok - ValueError: invalid literal for int() with base 10: ...\nFAILED ::test_parse_invalid[abc] - Failed: DID NOT RAISE ValueError\nFAILED ::test_parse_invalid[5x] - Failed: DID NOT RAISE ValueError\nFAILED ::test_roundtrip - ValueError: invalid format\n4 failed, 8 passed in 0.02s\n"
+    },
+    {
+      "task": "h08_duration",
+      "sample": 3,
+      "ok": false,
+      "passed": 8,
+      "failed": 4,
+      "gen_seconds": 12.1,
+      "rag_chars": 1148,
+      "tail": "E ValueError\n=========================== short test summary info ============================\nFAILED ::test_parse_invalid[-5s] - Failed: DID NOT RAISE ValueError\nFAILED ::test_parse_invalid[1.5h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_parse_invalid[30m1h] - Failed: DID NOT RAISE ValueError\nFAILED ::test_parse_invalid[1h 30m] - Failed: DID NOT RAISE ValueError\n4 failed, 8 passed in 0.01s\n"
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 9.8,
+      "rag_chars": 808,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 1,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 10.4,
+      "rag_chars": 808,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 2,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 10.5,
+      "rag_chars": 808,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 3,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 8.8,
+      "rag_chars": 808,
+      "tail": ""
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 10.2,
+      "rag_chars": 1051,
+      "tail": "tribute 'timezone'. Did you mean: 'astimezone'?\n=========================== short test summary info ============================\nFAILED ::test_pair_claims - AttributeError: type object 'datetime.datetime' h...\nFAILED ::test_verify_access_only - AttributeError: type object 'datetime.date...\nFAILED ::test_refresh_flow - AttributeError: type object 'datetime.datetime' ...\n3 failed, 1 passed in 0.05s\n"
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 1,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 10.5,
+      "rag_chars": 1051,
+      "tail": "tribute 'timezone'. Did you mean: 'astimezone'?\n=========================== short test summary info ============================\nFAILED ::test_pair_claims - AttributeError: type object 'datetime.datetime' h...\nFAILED ::test_verify_access_only - AttributeError: type object 'datetime.date...\nFAILED ::test_refresh_flow - AttributeError: type object 'datetime.datetime' ...\n3 failed, 1 passed in 0.04s\n"
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 2,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 11.3,
+      "rag_chars": 1051,
+      "tail": " no attribute 'decode'. Did you mean: 'encode'?\n=========================== short test summary info ============================\nFAILED ::test_pair_claims - AttributeError: 'str' object has no attribute 'de...\nFAILED ::test_verify_access_only - AttributeError: 'str' object has no attrib...\nFAILED ::test_refresh_flow - AttributeError: 'str' object has no attribute 'd...\n3 failed, 1 passed in 0.05s\n"
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 3,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 10.6,
+      "rag_chars": 1051,
+      "tail": "tribute 'timezone'. Did you mean: 'astimezone'?\n=========================== short test summary info ============================\nFAILED ::test_pair_claims - AttributeError: type object 'datetime.datetime' h...\nFAILED ::test_verify_access_only - AttributeError: type object 'datetime.date...\nFAILED ::test_refresh_flow - AttributeError: type object 'datetime.datetime' ...\n3 failed, 1 passed in 0.04s\n"
+    }
+  ]
+}

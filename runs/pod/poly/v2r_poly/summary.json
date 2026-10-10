@@ -1,0 +1,502 @@
+{
+  "name": "v2r_poly",
+  "model": "elias-v2",
+  "rag": true,
+  "pass_rate": 0.5,
+  "total": 48,
+  "por_linguagem": {
+    "python": 0.5,
+    "js": 0.25,
+    "c": 0.5,
+    "go": 0.125,
+    "java": 0.875,
+    "sql": 0.75
+  },
+  "por_nivel": {
+    "1": 0.75,
+    "2": 0.545,
+    "3": 0.214
+  },
+  "results": [
+    {
+      "id": "py1_two_sum",
+      "lang": "python",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 5.7,
+      "tail": ""
+    },
+    {
+      "id": "py1_two_sum",
+      "lang": "python",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 3.0,
+      "tail": ""
+    },
+    {
+      "id": "js1_case",
+      "lang": "js",
+      "area": "strings",
+      "level": 1,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 3.9,
+      "tail": "ader:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 'PrivateVar',\n  expected: 'privateVar',\n  operator: 'strictEqual'\n}\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "js1_case",
+      "lang": "js",
+      "area": "strings",
+      "level": 1,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 3.5,
+      "tail": "r:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: '_hello_world',\n  expected: 'hello_world',\n  operator: 'strictEqual'\n}\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "c1_bits",
+      "lang": "c",
+      "area": "sistemas / bits",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 5.1,
+      "tail": ""
+    },
+    {
+      "id": "c1_bits",
+      "lang": "c",
+      "area": "sistemas / bits",
+      "level": 1,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 5.1,
+      "tail": ""
+    },
+    {
+      "id": "go1_fib",
+      "lang": "go",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 5.4,
+      "tail": ""
+    },
+    {
+      "id": "go1_fib",
+      "lang": "go",
+      "area": "algoritmos",
+      "level": 1,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 4.7,
+      "tail": "--- FAIL: TestFibErrors (0.00s)\n    solution_test.go:19: Fib(93) deveria dar erro\nFAIL\nFAIL\tsolution\t0.081s\nFAIL\n"
+    },
+    {
+      "id": "java1_strings",
+      "lang": "java",
+      "area": "strings",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 7.9,
+      "tail": ""
+    },
+    {
+      "id": "java1_strings",
+      "lang": "java",
+      "area": "strings",
+      "level": 1,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 7.8,
+      "tail": ""
+    },
+    {
+      "id": "sql1_avg",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 1,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 1.9,
+      "tail": ""
+    },
+    {
+      "id": "sql1_avg",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 1,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 2.1,
+      "tail": ""
+    },
+    {
+      "id": "py2_cidr",
+      "lang": "python",
+      "area": "redes",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 3.0,
+      "tail": ""
+    },
+    {
+      "id": "py2_cidr",
+      "lang": "python",
+      "area": "redes",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 3.2,
+      "tail": ""
+    },
+    {
+      "id": "js2_route",
+      "lang": "js",
+      "area": "web",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 5.6,
+      "tail": "at Object.<anonymous> (/root/lab/runs/poly/v2r_poly/js2_route/s0/test.js:4:24)\n    at Module._compile (node:internal/modules/cjs/loader:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "js2_route",
+      "lang": "js",
+      "area": "web",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 5.0,
+      "tail": ""
+    },
+    {
+      "id": "js3_retry",
+      "lang": "js",
+      "area": "assíncrono",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 3.8,
+      "tail": "AssertionError [ERR_ASSERTION]: deveria esperar entre tentativas\n    at /root/lab/runs/poly/v2r_poly/js3_retry/s0/test.js:18:10 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '=='\n}\n"
+    },
+    {
+      "id": "js3_retry",
+      "lang": "js",
+      "area": "assíncrono",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 4.1,
+      "tail": ""
+    },
+    {
+      "id": "c2_strings",
+      "lang": "c",
+      "area": "strings / memória",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 5.7,
+      "tail": ""
+    },
+    {
+      "id": "c2_strings",
+      "lang": "c",
+      "area": "strings / memória",
+      "level": 2,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 6.1,
+      "tail": "t: test.c:7: main: Assertion `strcmp(a, \"hi there\") == 0' failed.\n"
+    },
+    {
+      "id": "c3_stack",
+      "lang": "c",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 8.6,
+      "tail": ""
+    },
+    {
+      "id": "c3_stack",
+      "lang": "c",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 8.3,
+      "tail": ""
+    },
+    {
+      "id": "go2_wordfreq",
+      "lang": "go",
+      "area": "texto",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 4.2,
+      "tail": "FAIL\tsolution [build failed]\nFAIL\n# solution [solution.test]\n./solution.go:6:2: \"unicode\" imported and not used\n"
+    },
+    {
+      "id": "go2_wordfreq",
+      "lang": "go",
+      "area": "texto",
+      "level": 2,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 3.8,
+      "tail": "FAIL\tsolution [build failed]\nFAIL\n# solution [solution.test]\n./solution.go:6:2: \"unicode\" imported and not used\n"
+    },
+    {
+      "id": "go3_sumpar",
+      "lang": "go",
+      "area": "concorrência",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 6.0,
+      "tail": "--- FAIL: TestSumParallel (0.01s)\n    solution_test.go:16: workers=1 got 1 want 500000500000\n--- FAIL: TestSumParallelEdges (0.00s)\n    solution_test.go:27: workers=0 got 5\nFAIL\nFAIL\tsolution\t0.010s\nFAIL\n"
+    },
+    {
+      "id": "go3_sumpar",
+      "lang": "go",
+      "area": "concorrência",
+      "level": 2,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 6.6,
+      "tail": "--- FAIL: TestSumParallel (0.01s)\n    solution_test.go:16: workers=7 got 499999500000 want 500000500000\n--- FAIL: TestSumParallelEdges (0.00s)\n    solution_test.go:27: workers=10 got 21\nFAIL\nFAIL\tsolution\t0.014s\nFAIL\n"
+    },
+    {
+      "id": "java2_topk",
+      "lang": "java",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 6.3,
+      "tail": ""
+    },
+    {
+      "id": "java2_topk",
+      "lang": "java",
+      "area": "estruturas de dados",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 6.2,
+      "tail": ""
+    },
+    {
+      "id": "java3_account",
+      "lang": "java",
+      "area": "orientação a objetos",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 7.4,
+      "tail": ""
+    },
+    {
+      "id": "java3_account",
+      "lang": "java",
+      "area": "orientação a objetos",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 7.3,
+      "tail": ""
+    },
+    {
+      "id": "sql2_noorders",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 1.9,
+      "tail": ""
+    },
+    {
+      "id": "sql2_noorders",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 2.0,
+      "tail": ""
+    },
+    {
+      "id": "sql3_topper",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 2.1,
+      "tail": "esperado: [('FIN', 'Edu', 9000), ('RH', 'Duda', 4400), ('TI', 'Bia', 7000)]\nobtido:   [('FIN', 'Edu', 9000)]\n"
+    },
+    {
+      "id": "sql3_topper",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 2,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 2.3,
+      "tail": "esperado: [('FIN', 'Edu', 9000), ('RH', 'Duda', 4400), ('TI', 'Bia', 7000)]\nobtido:   [('FIN', 'Edu', 9000), ('RH', 'Duda', 4400), ('RH', 'Gabi', 4400), ('TI', 'Bia', 7000)]\n"
+    },
+    {
+      "id": "py3_parallel",
+      "lang": "python",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 5.8,
+      "tail": "                                                   [100%]\n=================================== FAILURES ===================================\nE   TypeError: exceptions must derive from BaseException\n/root/lab/runs/poly/v2r_poly/py3_parallel/s0/solution.py:26: TypeError: exceptions must derive from BaseException\n=========================== short test summary info ============================\nFAILED test_solution.py::test_exception_and_invalid - TypeError: exceptions m...\n1 failed, 3 passed in 0.22s\n"
+    },
+    {
+      "id": "py3_parallel",
+      "lang": "python",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 4.1,
+      "tail": "== [2, 4, 6, 8, 10]\nE   assert [5, 2, 4, 3] == [2, 3, 4, 5]\n      \n      At index 0 diff: 5 != 2\n      Use -v to get more diff\n/root/lab/runs/poly/v2r_poly/py3_parallel/s1/test_solution.py:15: assert [5, 2, 4, 3] == [2, 3, 4, 5]\n=========================== short test summary info ============================\nFAILED test_solution.py::test_order_and_values - assert [6, 4, 2, 8, 10] == [...\nFAILED test_solution.py::test_really_concurrent - assert [5, 2, 4, 3] == [2, ...\n2 failed, 2 passed in 0.22s\n"
+    },
+    {
+      "id": "py4_calc",
+      "lang": "python",
+      "area": "compiladores",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 8.9,
+      "tail": "FAILED test_solution.py::test_values[10-2-3-5] - ValueError: Invalid expression\nFAILED test_solution.py::test_values[--2-2] - ValueError: Invalid expression\nFAILED test_solution.py::test_zero_division - ValueError: Invalid expression\nFAILED test_solution.py::test_invalid[2+] - Failed: DID NOT RAISE ValueError\nFAILED test_solution.py::test_invalid[(2] - IndexError: list index out of range\nFAILED test_solution.py::test_invalid[2+*3] - Failed: DID NOT RAISE ValueError\n13 failed, 10 passed in 0.03s\n"
+    },
+    {
+      "id": "py4_calc",
+      "lang": "python",
+      "area": "compiladores",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 17.1,
+      "tail": "lution.py::test_values[10-2-3-5] - ValueError: Invalid expression\nFAILED test_solution.py::test_values[  7  -7] - TypeError: 'in <string>' requ...\nFAILED test_solution.py::test_values[--2-2] - TypeError: 'in <string>' requir...\nFAILED test_solution.py::test_zero_division - TypeError: 'in <string>' requir...\nFAILED test_solution.py::test_invalid[2+] - TypeError: 'in <string>' requires...\nFAILED test_solution.py::test_invalid[2 3] - TypeError: 'in <string>' require...\n14 failed, 9 passed in 0.03s\n"
+    },
+    {
+      "id": "js4_emitter",
+      "lang": "js",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 7.2,
+      "tail": " Object.<anonymous> (/root/lab/runs/poly/v2r_poly/js4_emitter/s0/test.js:15:3)\n    at Module._compile (node:internal/modules/cjs/loader:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "js4_emitter",
+      "lang": "js",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 7.7,
+      "tail": " Object.<anonymous> (/root/lab/runs/poly/v2r_poly/js4_emitter/s1/test.js:15:3)\n    at Module._compile (node:internal/modules/cjs/loader:1356:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)\n    at Module.load (node:internal/modules/cjs/loader:1197:32)\n    at Module._load (node:internal/modules/cjs/loader:1013:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)\n    at node:internal/main/run_main_module:28:49\n\nNode.js v18.19.1\n"
+    },
+    {
+      "id": "c4_parse_int",
+      "lang": "c",
+      "area": "parsing / overflow",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 7.1,
+      "tail": "t: test.c:9: main: Assertion `ok(\"0\", 0) && ok(\"42\", 42) && ok(\"-42\", -42) && ok(\"+7\", 7) && ok(\"007\", 7)' failed.\n"
+    },
+    {
+      "id": "c4_parse_int",
+      "lang": "c",
+      "area": "parsing / overflow",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 7.6,
+      "tail": "t: test.c:10: main: Assertion `ok(\"2147483647\", INT_MAX) && ok(\"-2147483648\", INT_MIN)' failed.\n"
+    },
+    {
+      "id": "go4_lru",
+      "lang": "go",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 8.8,
+      "tail": "FAIL\tsolution [build failed]\nFAIL\n# solution [solution.test]\n./solution.go:37:10: syntax error: unexpected literal 2, expected type\n"
+    },
+    {
+      "id": "go4_lru",
+      "lang": "go",
+      "area": "estruturas de dados",
+      "level": 3,
+      "sample": 1,
+      "ok": false,
+      "gen_seconds": 8.4,
+      "tail": "FAIL\tsolution [build failed]\nFAIL\n# solution [solution.test]\n./solution.go:37:10: syntax error: unexpected literal 2, expected type\n"
+    },
+    {
+      "id": "java4_counter",
+      "lang": "java",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 0,
+      "ok": false,
+      "gen_seconds": 2.8,
+      "tail": "FALHOU: perdeu atualizacoes: 301181\n"
+    },
+    {
+      "id": "java4_counter",
+      "lang": "java",
+      "area": "concorrência",
+      "level": 3,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 3.6,
+      "tail": ""
+    },
+    {
+      "id": "sql4_running",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 3,
+      "sample": 0,
+      "ok": true,
+      "gen_seconds": 2.5,
+      "tail": ""
+    },
+    {
+      "id": "sql4_running",
+      "lang": "sql",
+      "area": "bancos de dados",
+      "level": 3,
+      "sample": 1,
+      "ok": true,
+      "gen_seconds": 2.4,
+      "tail": ""
+    }
+  ]
+}
