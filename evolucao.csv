@@ -8,4 +8,10 @@ ciclo,rotulo,suite,pct,tipo
 3,+ LoRA v2,dev,48,aluno
 3,+ LoRA v2,heldout,12,aluno
 3,+ LoRA v2,poly,52,aluno
+4,+ LoRA v3,dev,54,aluno
+4,+ LoRA v3,heldout,15,aluno
+4,+ LoRA v3,poly,58,aluno
+5,+ LoRA v4 (RFT),dev,45,aluno
+5,+ LoRA v4 (RFT),heldout,30,aluno
+5,+ LoRA v4 (RFT),poly,58,aluno
 teto,Professor 32B,dev,79,teto

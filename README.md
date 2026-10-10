@@ -39,7 +39,7 @@ Todas as técnicas do [guia](GUIA_PERSONALIZACAO_IA_LOCAL.md) valem (RAG, LoRA, 
 | `suite/poly.py` | Bateria **multilinguagem**: 24 desafios (Python, JS, C, Go, Java, SQL) em 3 níveis, em sequência |
 | `spec/TASK.md`, `tests/test_api.py`, `reference/` | Tarefa grande (API FastAPI + SQLAlchemy + JWT): prompt, 21 testes escondidos e solução de referência (21/21) |
 | `harness/` | `lib.py` (cliente Ollama), `run_suite.py`, `run_poly.py`, `run_baseline.py`, `run_repair.py`, `gen_dataset.py` e `gen_poly_dataset.py` (dataset verificado por execução com o professor), `gen_rft.py` (amostragem com rejeição do próprio aluno), `train_lora.py`, `merge_lora.py`, `pod_pipeline.sh`, `rft_v4.sh`, `plot_evolucao.py` |
-| `artefatos/` | Adaptador LoRA v3 em GGUF (87 MB). Os arquivos grandes (modelo de 5 GB, adaptador safetensors) vão em **Releases** do GitHub |
+| `artefatos/` | Adaptador LoRA v3 em GGUF (87 MB, só referência). O modelo `elias-v4` (5 GB, em partes) e o adaptador v4 ficam nas **Releases** do GitHub, com o script `instalar_elias_v4.bat` |
 | `Modelfile.v1` | Primeiro ajuste (system prompt + parâmetros) |
 | `evolucao.csv`, `evolucao.svg` | Dados e gráfico da evolução |
 | `runs/pod/` | Resumos dos resultados rodados na GPU |
@@ -54,7 +54,8 @@ Todas as técnicas do [guia](GUIA_PERSONALIZACAO_IA_LOCAL.md) valem (RAG, LoRA, 
 | + LoRA v2 + RAG | 55% | 28% | 50% | |
 | + LoRA v3 (bf16, 2 épocas, lr 1e-4, dropout 0,1) | 54% | 15% | **58%** | Go 12%→38%, Python 50%→62% |
 | + LoRA v3 + RAG | 50% | 20% | 50% | |
-| v4: RFT do próprio aluno | em andamento | em andamento | em andamento | ver seção 8 |
+| **+ LoRA v4 (RFT: treina nas próprias respostas corretas)** | 45% | 30% | **58%** | empata com o cru sem o dano do v3; Go 13%→38%, JS 38%→50% |
+| + LoRA v4 + RAG | 57% | 28% | 46% | RAG não ajuda o v4 na multilinguagem |
 | Professor qwen2.5-coder:32b (1 amostra) | 79% | — | — | teto atual |
 
 Multilinguagem do modelo cru por linguagem: Python 50%, JS 38%, C 63%, **Go 13%**, Java 75%, SQL 88%; por nível: fácil 75%, médio 59%, difícil 29%.
@@ -72,10 +73,12 @@ Multilinguagem do modelo cru por linguagem: Python 50%, JS 38%, C 63%, **Go 13%*
 8. **Armadilhas do pod:** instalar as dependências do `llama.cpp` troca o PyTorch por uma versão sem CUDA e rebaixa o `transformers` (usar um ambiente virtual só para converter); o tokenizador salvo pelo `transformers` 5 quebra o conversor (restaurar o original); o Ollama novo não aceita adaptador LoRA (juntar o adaptador ao modelo e quantizar com `llama.cpp`); o disco de 31 GB enche com o cache do modelo base.
 
 ## 7. Regra de entrega
-O modelo treinado só vira padrão do `ia.bat` se bater o `qwen3:8b` cru **nas duas suítes que não viram** (inédita > 35% e multilinguagem > 54%) sem piorar a dev. Se não bater, o padrão continua `qwen3:8b` com RAG. O `elias-v3` é distribuído como **experimental** (Go e Python na multilinguagem melhoram, mas a inédita piora).
+O modelo treinado só vira padrão do `ia.bat` se bater o `qwen3:8b` cru **nas duas suítes que não viram** (inédita > 35% e multilinguagem > 54%) sem piorar a dev. Se não bater, o padrão continua `qwen3:8b` com RAG. O `elias-v4` é distribuído como **experimental** (melhor LoRA: empata na inédita e melhora Go/JS). O v3 e o v2 não são recomendados (pioram a inédita).
 
-## 8. Ciclo v4 (em andamento): amostragem com rejeição do próprio aluno
-Em vez de imitar o professor, o `qwen3:8b` gera 8 soluções para cada uma das 281 tarefas verificadas, os testes filtram, e ele treina só nas próprias respostas corretas (mais exemplos onde acerta só às vezes). Isso reforça o que ele já sabe fazer sem mudar o estilo. O pipeline (`harness/rft_v4.sh` → `pod_pipeline.sh`) treina, junta o adaptador, converte para GGUF Q4_K_M, importa no Ollama e roda as 6 medições. Resultado: ver a tabela da seção 5.
+## 8. Ciclo v4: amostragem com rejeição do próprio aluno (RFT)
+Em vez de imitar o professor, o `qwen3:8b` gerou 8 soluções para cada uma das 281 tarefas verificadas, os testes filtraram, e ele treinou só nas próprias respostas corretas (1 exemplo onde acerta sempre, até 2 onde acerta só às vezes). Resultado da geração: das 281 tarefas, o aluno **nunca acertou 167**, acertou sempre 52 e acertou às vezes 62, o que rendeu **156 exemplos**. Treino: 2 épocas em bf16, loss 0,03, 3 minutos.
+**Resultado:** não repetiu o dano do v3. Empata com o modelo cru na suíte inédita (30% contra 35%, diferença de 2 amostras em 40) e melhora a multilinguagem em 4 pontos (58% contra 54%), com ganhos em Go e JS. Pela regra de entrega (seção 7) **não vira o padrão** do `ia.bat`, porque o ganho não é claro o bastante; é distribuído como opção experimental `elias-v4`.
+**Limite:** 156 exemplos e 10 tarefas inéditas dão resultados ruidosos; para afirmar um ganho real é preciso mais dados de treino e uma suíte inédita maior.
 
 ## 9. Próximos passos
 1. Resultado do v4; se bater a regra de entrega, trocar o padrão do `ia.bat` e publicar.

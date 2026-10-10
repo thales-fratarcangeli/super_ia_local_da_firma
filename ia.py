@@ -139,10 +139,8 @@ class Agente:
         for _ in range(25):  # limite de passos por pedido
             t0 = time.time()
             print("   ... pensando", end="\r", flush=True)
-            m = self.chamar()
+            m = self.chamar(com_ferramentas=self.tarefa)
             self.msgs.append(m)
-            if m.get("content"):
-                print(f"\nIA: {m['content'].strip()}\n")
             calls = m.get("tool_calls") or []
             if not calls:
                 return
@@ -180,6 +178,11 @@ def preaquecer(modelo):
 
 
 def main():
+    for _s in (sys.stdout, sys.stderr):  # nunca quebrar por causa de emoji/acento em terminais com codificação antiga
+        try:
+            _s.reconfigure(errors="replace")
+        except Exception:  # noqa: BLE001
+            pass
     ap = argparse.ArgumentParser()
     ap.add_argument("--pasta", default=str(AQUI / "workspace"))
     ap.add_argument("--modelo", default=os.environ.get("IA_MODELO", "qwen3:8b"))
