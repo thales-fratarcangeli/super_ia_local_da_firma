@@ -1,0 +1,103 @@
+{
+  "passed": 0,
+  "failed": 21,
+  "errors": 0,
+  "total": 21,
+  "failures": [
+    {
+      "test": "test_register_ok_and_no_password_leak",
+      "message": "sqlalchemy.exc.NoForeignKeysError: Could not determine join condition between parent/child tables on relationship User.tasks - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' express"
+    },
+    {
+      "test": "test_register_duplicate_409",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_register_validation_422",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_login_ok_and_token_is_jwt",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_login_wrong_password_401",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_protected_requires_token",
+      "message": "AssertionError: assert 422 == 401\n +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n +    where <Response [422 Unprocessable Entity]> = get('/projects')\n +      where get = <starlette.testclient.TestClient object at 0x00000212402F6F90>.get"
+    },
+    {
+      "test": "test_expired_token_401",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_create_project_and_validation",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_member_sees_only_own_projects_admin_sees_all",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_project_pagination",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_pagination_invalid_422[page=0]",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_pagination_invalid_422[page_size=0]",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_pagination_invalid_422[page_size=51]",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_pagination_invalid_422[page=abc]",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_project_permissions",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_delete_project_cascades_tasks",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_create_task_defaults_and_validation",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_task_project_permissions",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_list_tasks_filter_and_pagination",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_patch_task_partial",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    },
+    {
+      "test": "test_task_permissions_patch_delete",
+      "message": "sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are n"
+    }
+  ],
+  "stdout_tail": "re_failed = mapper._configure_failed  # type: ignore\n>                   raise e\nE                   sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[User(users)]'. Original exception was: Could not determine join condition between parent/child tables on relationship User.tasks - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.\n\nC:\\Users\\sigma\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\sqlalchemy\\orm\\mapper.py:4265: InvalidRequestError\n============================== warnings summary ===============================\n..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Users\\sigma\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ===========================\nFAILED ::test_register_ok_and_no_password_leak - sqlalchemy.exc.NoForeignKeys...\nFAILED ::test_register_duplicate_409 - sqlalchemy.exc.InvalidRequestError: On...\nFAILED ::test_register_validation_422 - sqlalchemy.exc.InvalidRequestError: O...\nFAILED ::test_login_ok_and_token_is_jwt - sqlalchemy.exc.InvalidRequestError:...\nFAILED ::test_login_wrong_password_401 - sqlalchemy.exc.InvalidRequestError: ...\nFAILED ::test_protected_requires_token - AssertionError: assert 422 == 401\nFAILED ::test_expired_token_401 - sqlalchemy.exc.InvalidRequestError: One or ...\nFAILED ::test_create_project_and_validation - sqlalchemy.exc.InvalidRequestEr...\nFAILED ::test_member_sees_only_own_projects_admin_sees_all - sqlalchemy.exc.I...\nFAILED ::test_project_pagination - sqlalchemy.exc.InvalidRequestError: One or...\nFAILED ::test_pagination_invalid_422[page=0] - sqlalchemy.exc.InvalidRequestE...\nFAILED ::test_pagination_invalid_422[page_size=0] - sqlalchemy.exc.InvalidReq...\nFAILED ::test_pagination_invalid_422[page_size=51] - sqlalchemy.exc.InvalidRe...\nFAILED ::test_pagination_invalid_422[page=abc] - sqlalchemy.exc.InvalidReques...\nFAILED ::test_project_permissions - sqlalchemy.exc.InvalidRequestError: One o...\nFAILED ::test_delete_project_cascades_tasks - sqlalchemy.exc.InvalidRequestEr...\nFAILED ::test_create_task_defaults_and_validation - sqlalchemy.exc.InvalidReq...\nFAILED ::test_task_project_permissions - sqlalchemy.exc.InvalidRequestError: ...\nFAILED ::test_list_tasks_filter_and_pagination - sqlalchemy.exc.InvalidReques...\nFAILED ::test_patch_task_partial - sqlalchemy.exc.InvalidRequestError: One or...\nFAILED ::test_task_permissions_patch_delete - sqlalchemy.exc.InvalidRequestEr...\n",
+  "files": [
+    "app/auth.py",
+    "app/main.py",
+    "app/models.py",
+    "app/schemas.py"
+  ],
+  "gen": {
+    "seconds": 1514.9,
+    "chunks": 3534
+  }
+}

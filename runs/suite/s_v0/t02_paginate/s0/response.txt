@@ -1,0 +1,22 @@
+```python
+def paginate(items: list, page: int = 1, page_size: int = 10) -> dict:
+    if page < 1:
+        raise ValueError("Page must be at least 1")
+    if not 1 <= page_size <= 50:
+        raise ValueError("Page size must be between 1 and 50")
+    
+    start = (page - 1) * page_size
+    end = start + page_size
+    paginated_items = items[start:end]
+    
+    total = len(items)
+    if end > total:
+        paginated_items = items[start:]
+    
+    return {
+        "items": paginated_items,
+        "total": total,
+        "page": page,
+        "page_size": page_size
+    }
+```

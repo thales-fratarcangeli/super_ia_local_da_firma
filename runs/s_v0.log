@@ -1,0 +1,15 @@
+t01_slugify s0: FAIL (3 ok, 1 falhou) gen=119.9s
+t02_paginate s0: OK  (7 ok, 0 falhou) gen=120.1s
+t03_querystring s0: FAIL (3 ok, 1 falhou) gen=195.7s
+t04_lru s0: OK  (3 ok, 0 falhou) gen=178.1s
+t05_password s0: FAIL (1 ok, 2 falhou) gen=223.3s
+t06_jwt s0: FAIL (1 ok, 3 falhou) gen=113.9s
+t07_sqlite_repo s0: OK  (4 ok, 0 falhou) gen=242.4s
+t08_sqlalchemy_models s0: FAIL (1 ok, 1 falhou) gen=154.0s
+t09_fastapi_auth s0: OK  (4 ok, 0 falhou) gen=120.9s
+t10_fastapi_pagination s0: OK  (8 ok, 0 falhou) gen=114.6s
+t11_intervals s0: FAIL (3 ok, 1 falhou) gen=88.0s
+t12_token_bucket s0: OK  (2 ok, 0 falhou) gen=130.5s
+t13_toposort s0: FAIL (0 ok, 0 falhou) gen=119.0s
+t14_pydantic s0: OK  (3 ok, 0 falhou) gen=167.8s
+== s_v0 [qwen3:8b]: 7/14 tarefas passando (50%)

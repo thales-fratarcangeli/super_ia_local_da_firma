@@ -1,0 +1,24 @@
+import jwt
+import time
+from typing import Optional
+
+def create_token(user_id: int, secret: str, minutes: int = 60) -> str:
+    payload = {
+        'sub': str(user_id),
+        'exp': int(time.time()) + minutes * 60
+    }
+    return jwt.encode(payload, secret, algorithm='HS256').decode('utf-8')
+
+def decode_token(token: str, secret: str) -> Optional[int]:
+    try:
+        payload = jwt.decode(token, secret, algorithms=['HS256'], options={'require_exp': True})
+        user_id = int(payload.get('sub'))
+        return user_id
+    except jwt.ExpiredSignatureError:
+        return None
+    except jwt.InvalidSignatureError:
+        return None
+    except jwt.DecodeError:
+        return None
+    except Exception:
+        return None

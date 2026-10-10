@@ -1,0 +1,109 @@
+{
+  "name": "href",
+  "model": "--reference",
+  "tasks_ok": 10,
+  "total": 10,
+  "pass_rate": 1.0,
+  "results": [
+    {
+      "task": "h01_roman",
+      "sample": 0,
+      "ok": true,
+      "passed": 11,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h02_brackets",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h03_csv_line",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h04_kv_ttl",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h05_fastapi_notes",
+      "sample": 0,
+      "ok": true,
+      "passed": 5,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h06_pydantic_range",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h07_sqlalchemy_tags",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h08_duration",
+      "sample": 0,
+      "ok": true,
+      "passed": 12,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h09_grid_path",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    },
+    {
+      "task": "h10_token_pair",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 0,
+      "rag_chars": 0,
+      "tail": ""
+    }
+  ]
+}

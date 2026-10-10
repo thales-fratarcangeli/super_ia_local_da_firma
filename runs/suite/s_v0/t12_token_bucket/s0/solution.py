@@ -1,0 +1,25 @@
+import time
+
+def RateLimiter(rate: float, capacity: int, clock=time.monotonic):
+    class TokenBucket:
+        def __init__(self, rate, capacity, clock):
+            self.capacity = capacity
+            self.rate = rate
+            self.clock = clock
+            self.tokens = capacity
+            self.last_refill_time = self.clock()
+
+        def refill(self):
+            now = self.clock()
+            elapsed = now - self.last_refill_time
+            self.tokens = min(self.capacity, self.tokens + elapsed * self.rate)
+            self.last_refill_time = now
+
+        def allow(self, cost: int = 1) -> bool:
+            self.refill()
+            if self.tokens >= cost:
+                self.tokens -= cost
+                return True
+            return False
+
+    return TokenBucket(rate, capacity, clock)

@@ -1,0 +1,135 @@
+{
+  "name": "s_v0",
+  "model": "qwen3:8b",
+  "tasks_ok": 7,
+  "total": 14,
+  "pass_rate": 0.5,
+  "results": [
+    {
+      "task": "t01_slugify",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 119.9,
+      "tail": " \n      - foo-bar-baz\n      + foo----bar--baz\n      ?    +++     +\nC:\\Users\\sigma\\Documents\\elias_ia_firma\\runs\\suite\\s_v0\\tests\\test_t01_slugify.py:10: AssertionError: assert 'foo----bar--baz' == 'foo-bar-baz'\n=========================== short test summary info ===========================\nFAILED ::test_symbols_and_edges - AssertionError: assert 'foo----bar--baz' ==...\n1 failed, 3 passed in 0.06s\n"
+    },
+    {
+      "task": "t02_paginate",
+      "sample": 0,
+      "ok": true,
+      "passed": 7,
+      "failed": 0,
+      "gen_seconds": 120.1,
+      "tail": ""
+    },
+    {
+      "task": "t03_querystring",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 195.7,
+      "tail": " 'ç']}\n      Use -v to get more diff\nC:\\Users\\sigma\\Documents\\elias_ia_firma\\runs\\suite\\s_v0\\tests\\test_t03_querystring.py:11: AssertionError: assert {'t': ['a b',...d', '%C3%A7']} == {'t': ['a b', 'c d', 'ç']}\n=========================== short test summary info ===========================\nFAILED ::test_repeated_and_decoding - AssertionError: assert {'t': ['a b',......\n1 failed, 3 passed in 4.57s\n"
+    },
+    {
+      "task": "t04_lru",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 178.1,
+      "tail": ""
+    },
+    {
+      "task": "t05_password",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 2,
+      "gen_seconds": 223.3,
+      "tail": "n b64decode at 0x000001CFAEA10D50> = base64.b64decode\nC:\\Users\\sigma\\Documents\\elias_ia_firma\\runs\\suite\\s_v0\\tests\\test_t05_password.py:14: AssertionError: assert 17 == 16\n=========================== short test summary info ===========================\nFAILED ::test_roundtrip - AssertionError: assert False\nFAILED ::test_format_and_salt - AssertionError: assert 17 == 16\n2 failed, 1 passed in 1.36s\n"
+    },
+    {
+      "task": "t06_jwt",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 3,
+      "gen_seconds": 113.9,
+      "tail": "s no attribute 'decode'. Did you mean: 'encode'?\n=========================== short test summary info ===========================\nFAILED ::test_roundtrip - AttributeError: 'str' object has no attribute 'deco...\nFAILED ::test_wrong_secret_and_garbage - AttributeError: 'str' object has no ...\nFAILED ::test_expired - AttributeError: 'str' object has no attribute 'decode...\n3 failed, 1 passed in 0.53s\n"
+    },
+    {
+      "task": "t07_sqlite_repo",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 242.4,
+      "tail": ""
+    },
+    {
+      "task": "t08_sqlalchemy_models",
+      "sample": 0,
+      "ok": false,
+      "passed": 1,
+      "failed": 1,
+      "gen_seconds": 154.0,
+      "tail": "uteError: 'sessionmaker' object has no attribute 'add'\nC:\\Users\\sigma\\Documents\\elias_ia_firma\\runs\\suite\\s_v0\\tests\\test_t08_sqlalchemy_models.py:9: AttributeError: 'sessionmaker' object has no attribute 'add'\n=========================== short test summary info ===========================\nFAILED ::test_relationships_and_cascade - AttributeError: 'sessionmaker' obje...\n1 failed, 1 passed in 0.66s\n"
+    },
+    {
+      "task": "t09_fastapi_auth",
+      "sample": 0,
+      "ok": true,
+      "passed": 4,
+      "failed": 0,
+      "gen_seconds": 120.9,
+      "tail": ""
+    },
+    {
+      "task": "t10_fastapi_pagination",
+      "sample": 0,
+      "ok": true,
+      "passed": 8,
+      "failed": 0,
+      "gen_seconds": 114.6,
+      "tail": ""
+    },
+    {
+      "task": "t11_intervals",
+      "sample": 0,
+      "ok": false,
+      "passed": 3,
+      "failed": 1,
+      "gen_seconds": 88.0,
+      "tail": "= FAILURES ===================================\nE   Failed: DID NOT RAISE <class 'ValueError'>\nC:\\Users\\sigma\\Documents\\elias_ia_firma\\runs\\suite\\s_v0\\tests\\test_t11_intervals.py:17: Failed: DID NOT RAISE <class 'ValueError'>\n=========================== short test summary info ===========================\nFAILED ::test_invalid - Failed: DID NOT RAISE <class 'ValueError'>\n1 failed, 3 passed in 0.21s\n"
+    },
+    {
+      "task": "t12_token_bucket",
+      "sample": 0,
+      "ok": true,
+      "passed": 2,
+      "failed": 0,
+      "gen_seconds": 130.5,
+      "tail": ""
+    },
+    {
+      "task": "t13_toposort",
+      "sample": 0,
+      "ok": false,
+      "passed": 0,
+      "failed": 0,
+      "gen_seconds": 119.0,
+      "tail": "TIMEOUT"
+    },
+    {
+      "task": "t14_pydantic",
+      "sample": 0,
+      "ok": true,
+      "passed": 3,
+      "failed": 0,
+      "gen_seconds": 167.8,
+      "tail": ""
+    }
+  ]
+}

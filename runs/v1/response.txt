@@ -1,0 +1,353 @@
+### FILE: app/main.py
+```python
+from fastapi import FastAPI, Depends, HTTPException, Header, Query, status
+from fastapi.security import HTTPBearer
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
+from sqlalchemy.orm import declarative_base, sessionmaker, relationship
+from sqlalchemy.exc import SQLAlchemyError
+from pydantic import BaseModel, Field, ConfigDict
+from datetime import datetime, timedelta
+import os
+import jwt
+import bcrypt
+from typing import Annotated, List, Optional, Literal
+from app.database import Base, engine, get_db
+from app.routers import project_router, task_router, auth_router
+from app.schemas import UserCreate, UserResponse, TokenResponse, ProjectCreate, ProjectResponse, ProjectListResponse, TaskCreate, TaskResponse, TaskListResponse
+from app.auth import get_current_user, get_current_user_or_raise
+
+Base = declarative_base()
+
+class User(Base):
+    __tablename__ = "users"
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True, index=True)
+    password = Column(String)
+    role = Column(String, default="member")
+    projects = relationship("Project", back_populates="owner", cascade="all, delete-orphan")
+
+class Project(Base):
+    __tablename__ = "projects"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, index=True)
+    owner_id = Column(Integer, ForeignKey("users.id"))
+    owner = relationship("User", back_populates="projects")
+    tasks = relationship("Task", back_populates="project", cascade="all, delete-orphan")
+
+class Task(Base):
+    __tablename__ = "tasks"
+    id = Column(Integer, primary_key=True, index=True)
+    project_id = Column(Integer, ForeignKey("projects.id"))
+    project = relationship("Project", back_populates="tasks")
+    title = Column(String)
+    description = Column(String)
+    status = Column(String, default="todo")
+    __table_args__ = {"extend_existing": True}
+
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI()
+
+app.include_router(auth_router)
+app.include_router(project_router)
+app.include_router(task_router)
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Task Management API"}
+```
+
+### FILE: app/database.py
+```python
+from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_base, sessionmaker
+from os import environ
+
+DATABASE_URL = environ.get("DATABASE_URL", "sqlite:///./app.db")
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+```
+
+### FILE: app/auth.py
+```python
+from fastapi import Depends, HTTPException, status
+from fastapi.security import HTTPBearer
+from pydantic import BaseModel
+from datetime import datetime, timedelta
+import jwt
+import bcrypt
+from typing import Annotated, Optional
+from app.database import get_db
+from app.schemas import UserCreate, UserResponse
+from app.models import User
+
+JWT_SECRET = environ.get("JWT_SECRET", "dev-secret")
+
+class AuthBearer(HTTPBearer):
+    def __init__(self, auto_error: bool = False):
+        super().__init__(auto_error=auto_error)
+
+def get_current_user(token: str = Depends(AuthBearer()), db: Session = Depends(get_db)):
+    try:
+        payload = jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
+        user = db.query(User).filter(User.id == payload.get("sub")).first()
+        if not user:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+        return user
+    except jwt.PyJWTError:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+
+def get_current_user_or_raise(token: str = Depends(AuthBearer()), db: Session = Depends(get_db)):
+    try:
+        payload = jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
+        user = db.query(User).filter(User.id == payload.get("sub")).first()
+        if not user:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+        return user
+    except jwt.PyJWTError:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+
+def create_user(db: Session, user: UserCreate):
+    db_user = db.query(User).filter(User.username == user.username).first()
+    if db_user:
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Username already exists")
+    if len(user.password) < 6:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Password must be at least 6 characters")
+    if user.role not in ["member", "admin"]:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Invalid role")
+    hashed_password = bcrypt.hashpw(user.password.encode("utf-8"), bcrypt.gensalt())
+    db_user = User(username=user.username, password=hashed_password.decode("utf-8"), role=user.role)
+    db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return db_user
+
+def authenticate_user(db: Session, username: str, password: str):
+    user = db.query(User).filter(User.username == username).first()
+    if not user or not bcrypt.checkpw(password.encode("utf-8"), user.password.encode("utf-8")):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
+    return user
+```
+
+### FILE: app/schemas.py
+```python
+from pydantic import BaseModel, Field, ConfigDict
+from typing import List, Optional, Literal
+from datetime import datetime
+from app.models import User, Project, Task
+
+class UserCreate(BaseModel):
+    username: str
+    password: str
+    role: Literal["member", "admin"] = "member"
+
+class UserResponse(BaseModel):
+    id: int
+    username: str
+    role: Literal["member", "admin"]
+    model_config = ConfigDict(from_attributes=True)
+
+class TokenResponse(BaseModel):
+    access_token: str
+    token_type: Literal["bearer"]
+
+class ProjectCreate(BaseModel):
+    name: str
+
+class ProjectResponse(BaseModel):
+    id: int
+    name: str
+    owner_id: int
+    model_config = ConfigDict(from_attributes=True)
+
+class ProjectListResponse(BaseModel):
+    items: List[ProjectResponse]
+    total: int
+    page: int
+    page_size: int
+    model_config = ConfigDict(from_attributes=True)
+
+class TaskCreate(BaseModel):
+    title: str
+    description: Optional[str] = None
+    status: Literal["todo", "doing", "done"] = "todo"
+
+class TaskResponse(BaseModel):
+    id: int
+    project_id: int
+    title: str
+    description: Optional[str] = None
+    status: Literal["todo", "doing", "done"]
+    model_config = ConfigDict(from_attributes=True)
+
+class TaskListResponse(BaseModel):
+    items: List[TaskResponse]
+    total: int
+    page: int
+    page_size: int
+    model_config = ConfigDict(from_attributes=True)
+```
+
+### FILE: app/routers/auth_router.py
+```python
+from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi.responses import JSONResponse
+from app.auth import create_user, authenticate_user, get_current_user
+from app.schemas import UserCreate, UserResponse, TokenResponse
+from app.database import get_db
+
+router = APIRouter()
+
+@router.post("/register", response_model=UserResponse)
+def register_user(user: UserCreate, db: Session = Depends(get_db)):
+    return create_user(db, user)
+
+@router.post("/login", response_model=TokenResponse)
+def login_user(username: str, password: str, db: Session = Depends(get_db)):
+    user = authenticate_user(db, username, password)
+    access_token = jwt.encode({"sub": str(user.id), "exp": datetime.utcnow() + timedelta(minutes=60)}, JWT_SECRET, algorithm="HS256")
+    return {"access_token": access_token, "token_type": "bearer"}
+```
+
+### FILE: app/routers/project_router.py
+```python
+from fastapi import APIRouter, Depends, HTTPException, status, Query
+from fastapi.responses import JSONResponse
+from app.models import Project
+from app.schemas import ProjectCreate, ProjectResponse, ProjectListResponse
+from app.database import get_db
+from app.auth import get_current_user_or_raise
+
+router = APIRouter()
+
+@router.post("/projects", response_model=ProjectResponse)
+def create_project(project: ProjectCreate, db: Session = Depends(get_db), current_user: User = Depends(get_current_user_or_raise)):
+    db_project = Project(name=project.name, owner_id=current_user.id)
+    db.add(db_project)
+    db.commit()
+    db.refresh(db_project)
+    return db_project
+
+@router.get("/projects", response_model=ProjectListResponse)
+def get_projects(
+    page: int = Query(1, ge=1),
+    page_size: int = Query(10, ge=1, le=50),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user_or_raise)
+):
+    if current_user.role == "member":
+        projects = db.query(Project).filter(Project.owner_id == current_user.id).order_by(Project.id).offset((page - 1) * page_size).limit(page_size).all()
+    else:
+        projects = db.query(Project).order_by(Project.id).offset((page - 1) * page_size).limit(page_size).all()
+    total = len(projects)
+    return {"items": projects, "total": total, "page": page, "page_size": page_size}
+
+@router.get("/projects/{project_id}", response_model=ProjectResponse)
+def get_project(project_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user_or_raise)):
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Project not found")
+    if current_user.role == "member" and project.owner_id != current_user.id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not owner or admin")
+    return project
+
+@router.delete("/projects/{project_id}", response_model=None)
+def delete_project(project_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user_or_raise)):
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Project not found")
+    if current_user.role == "member" and project.owner_id != current_user.id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not owner or admin")
+    db.delete(project)
+    db.commit()
+    return JSONResponse(status_code=status.HTTP_204_NO_CONTENT)
+```
+
+### FILE: app/routers/task_router.py
+```python
+from fastapi import APIRouter, Depends, HTTPException, status, Query
+from fastapi.responses import JSONResponse
+from app.models import Task, Project
+from app.schemas import TaskCreate, TaskResponse, TaskListResponse
+from app.database import get_db
+from app.auth import get_current_user_or_raise
+
+router = APIRouter()
+
+@router.post("/projects/{project_id}/tasks", response_model=TaskResponse)
+def create_task(
+    project_id: int,
+    task: TaskCreate,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user_or_raise)
+):
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Project not found")
+    if current_user.role == "member" and project.owner_id != current_user.id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not owner or admin")
+    db_task = Task(**task.model_dump())
+    db_task.project_id = project_id
+    db.add(db_task)
+    db.commit()
+    db.refresh(db_task)
+    return db_task
+
+@router.get("/projects/{project_id}/tasks", response_model=TaskListResponse)
+def get_tasks(
+    project_id: int,
+    status: Optional[Literal["todo", "doing", "done"]] = None,
+    page: int = Query(1, ge=1),
+    page_size: int = Query(10, ge=1, le=50),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user_or_raise)
+):
+    project = db.query(Project).filter(Project.id == project_id).first()
+    if not project:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Project not found")
+    if current_user.role == "member" and project.owner_id != current_user.id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not owner or admin")
+    filters = []
+    if status:
+        filters.append(Task.status == status)
+    tasks = db.query(Task).filter(*filters).order_by(Task.id).offset((page - 1) * page_size).limit(page_size).all()
+    total = len(tasks)
+    return {"items": tasks, "total": total, "page": page, "page_size": page_size}
+
+@router.patch("/tasks/{task_id}", response_model=TaskResponse)
+def update_task(
+    task_id: int,
+    task: dict,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user_or_raise)
+):
+    db_task = db.query(Task).filter(Task.id == task_id).first()
+    if not db_task:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Task not found")
+    if current_user.role == "member" and db_task.project.owner_id != current_user.id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not owner or admin")
+    for key, value in task.items():
+        setattr(db_task, key, value)
+    db.commit()
+    db.refresh(db_task)
+    return db_task
+
+@router.delete("/tasks/{task_id}", response_model=None)
+def delete_task(task_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user_or_raise)):
+    db_task = db.query(Task).filter(Task.id == task_id).first()
+    if not db_task:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Task not found")
+    if current_user.role == "member" and db_task.project.owner_id != current_user.id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not owner or admin")
+    db.delete(db_task)
+    db.commit()
+    return JSONResponse(status_code=status.HTTP_204_NO_CONTENT)
+```

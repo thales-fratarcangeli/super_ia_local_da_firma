@@ -1,0 +1,20 @@
+from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
+
+app = FastAPI()
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
+@app.get("/me")
+def me(token: str = Depends(oauth2_scheme)):
+    if token != "secret-token":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid token",
+            headers={"WWW-Authenticate": "Bearer"}
+        )
+    return {"user": "admin"}

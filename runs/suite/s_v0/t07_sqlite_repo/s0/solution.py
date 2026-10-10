@@ -1,0 +1,66 @@
+import sqlite3
+
+class TodoRepo:
+    def __init__(self, path: str = ":memory:"):
+        self.conn = sqlite3.connect(path)
+        self.conn.execute("""
+            CREATE TABLE IF NOT EXISTS todos (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                title TEXT NOT NULL,
+                done INTEGER NOT NULL DEFAULT 0
+            )
+        """)
+        self.conn.commit()
+
+    def add(self, title: str) -> int:
+        if not title.strip():
+            raise ValueError("Title cannot be empty")
+        cursor = self.conn.cursor()
+        cursor.execute("INSERT INTO todos (title) VALUES (?)", (title,))
+        self.conn.commit()
+        return cursor.lastrowid
+
+    def get(self, id: int) -> dict | None:
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT id, title, done FROM todos WHERE id = ?", (id,))
+        row = cursor.fetchone()
+        if row:
+            return {
+                "id": row[0],
+                "title": row[1],
+                "done": bool(row[2])
+            }
+        return None
+
+    def list(self, done: bool | None = None) -> list[dict]:
+        query = "SELECT id, title, done FROM todos"
+        params = []
+        if done is not None:
+            query += " WHERE done = ?"
+            params.append(done)
+        cursor = self.conn.cursor()
+        cursor.execute(query, params)
+        rows = cursor.fetchall()
+        return [{
+            "id": row[0],
+            "title": row[1],
+            "done": bool(row[2])
+        } for row in rows]
+
+    def set_done(self, id: int, done: bool) -> bool:
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT id FROM todos WHERE id = ?", (id,))
+        if not cursor.fetchone():
+            return False
+        cursor.execute("UPDATE todos SET done = ? WHERE id = ?", (1 if done else 0, id))
+        self.conn.commit()
+        return True
+
+    def delete(self, id: int) -> bool:
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT id FROM todos WHERE id = ?", (id,))
+        if not cursor.fetchone():
+            return False
+        cursor.execute("DELETE FROM todos WHERE id = ?", (id,))
+        self.conn.commit()
+        return True

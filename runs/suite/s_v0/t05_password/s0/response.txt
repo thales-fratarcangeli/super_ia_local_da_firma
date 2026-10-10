@@ -1,0 +1,36 @@
+```python
+import hashlib
+import os
+import hmac
+import base64
+
+def hash_password(password: str) -> str:
+    iterations = 100000
+    salt = os.urandom(16)
+    dk = hmac.new(password.encode('utf-8'), salt, hashlib.sha256).digest()
+    for _ in range(iterations - 1):
+        dk = hmac.new(password.encode('utf-8'), dk, hashlib.sha256).digest()
+    hash_value = base64.b64encode(dk).decode('utf-8')
+    salt_b64 = base64.b64encode(salt).decode('utf-8')
+    return f"pbkdf2${iterations}$/{salt_b64}/$/{hash_value}/"
+
+def verify_password(password: str, stored: str) -> bool:
+    if not stored.startswith("pbkdf2$"):
+        return False
+    try:
+        parts = stored.split("$")
+        if len(parts) != 4:
+            return False
+        _, iterations_str, salt_hash_part, hash_part = parts
+        iterations = int(iterations_str)
+        salt_hash_part = salt_hash_part.split("/")[-1]
+        hash_part = hash_part.split("/")[-1]
+        salt = base64.b64decode(salt_hash_part)
+        stored_hash = base64.b64decode(hash_part)
+        dk = hmac.new(password.encode('utf-8'), salt, hashlib.sha256).digest()
+        for _ in range(iterations - 1):
+            dk = hmac.new(password.encode('utf-8'), dk, hashlib.sha256).digest()
+        return hmac.compare_digest(base64.b64encode(dk).decode('utf-8'), hash_part)
+    except (ValueError, IndexError):
+        return False
+```

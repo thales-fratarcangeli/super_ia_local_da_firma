@@ -1,0 +1,1 @@
+v1: 0/1 testes | arquivos=['app/auth.py', 'app/database.py', 'app/main.py', 'app/routers/auth_router.py', 'app/routers/project_router.py', 'app/routers/task_router.py', 'app/schemas.py'] | 3101.2s

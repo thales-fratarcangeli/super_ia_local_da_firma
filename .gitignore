@@ -13,3 +13,19 @@ junit.xml
 # configuração local da ferramenta e arquivos soltos
 .claude/
 aq
+
+# resultados das medições (pequenos): versionados para auditoria
+!runs/baseline/
+!runs/v1/
+!runs/repair1/
+!runs/suite/
+!runs/poly/
+!runs/s_v0.log
+!runs/s_v1.log
+!runs/repair1.log
+!runs/v1.log
+
+# binários gerados pelos testes
+*.exe
+*.class
+*.o

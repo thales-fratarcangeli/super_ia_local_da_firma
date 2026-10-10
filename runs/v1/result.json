@@ -1,0 +1,26 @@
+{
+  "passed": 0,
+  "failed": 0,
+  "errors": 1,
+  "total": 1,
+  "failures": [
+    {
+      "test": "",
+      "message": "collection failure"
+    }
+  ],
+  "stdout_tail": "\n=================================== ERRORS ====================================\n________________________ ERROR collecting test session ________________________\nImportError while importing test module 'C:\\Users\\sigma\\Documents\\elias_ia_firma\\tests\\test_api.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nC:\\Users\\sigma\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\importlib\\__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n..\\..\\..\\tests\\test_api.py:13: in <module>\n    from app.main import app  # noqa: E402\n    ^^^^^^^^^^^^^^^^^^^^^^^^\napp\\main.py:13: in <module>\n    from app.routers import project_router, task_router, auth_router\napp\\routers\\project_router.py:3: in <module>\n    from app.models import Project\nE   ModuleNotFoundError: No module named 'app.models'\n============================== warnings summary ===============================\n..\\..\\..\\..\\..\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Users\\sigma\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ===========================\nERROR \n!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n",
+  "files": [
+    "app/auth.py",
+    "app/database.py",
+    "app/main.py",
+    "app/routers/auth_router.py",
+    "app/routers/project_router.py",
+    "app/routers/task_router.py",
+    "app/schemas.py"
+  ],
+  "gen": {
+    "seconds": 3101.2,
+    "chunks": 3245
+  }
+}

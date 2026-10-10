@@ -1,0 +1,1 @@
+SELECT customer_id, id, total, SUM(total) OVER (PARTITION BY customer_id ORDER BY created_at, id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS running_total FROM orders ORDER BY customer_id, created_at, id;
